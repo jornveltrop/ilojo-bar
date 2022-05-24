@@ -10,13 +10,14 @@
 ## Description <a name="Description">
 
 ### User stories
-**1 Verhalen over Ilojo Bar lezen, luisteren en bekijken**  
-Als inwoner van Lagos, Nigeriaan, lid van de Nigeriaanse diaspora of geïnteresseerde wereldburger, wil ik online verhalen over Ilojo Bar kunnen lezen, luisteren en zien, zodat ik meer te weten kan komen over de betekenis van het gebouw voor de miljoenenstad Lagos en van de kosmopolitsche geschiedenis ervan, die van Spanje tot Brazilië tot Nigeria leidt.
+**1 Reading, listening and look at stories about Iloja bar**  
+As a resident from Lagos, member of the Nigerian diaspora of interested world citizen,
+Als inwoner van Lagos, Nigeriaan, lid van de Nigeriaanse diaspora of interested world citizen, wil ik online verhalen over Ilojo Bar kunnen lezen, luisteren en zien, zodat ik meer te weten kan komen over de betekenis van het gebouw voor de miljoenenstad Lagos en van de kosmopolitsche geschiedenis ervan, die van Spanje tot Brazilië tot Nigeria leidt.
 
-**2 Verhalen over Ilojo Bar toevoegen**  
+**2 Adding stories about Iloja bar**  
 Als kunstenaar/bezoeker wil ik een verhaal over Ilojo Bar kunnen toevoegen aan de website, zodat ik de betekenis van het gebouw kan uitdragen en aanvullen.
  
-**3 Ilojo Bar beleven**   
+**3 Experience Iloja bar**   
 Als inwoner van Lagos, Nigeriaan, lid van de diaspora of geïnteresseerde wereldburger wil ik een virtuele indruk van het gebouw kunnen krijgen, zodat ik kan zien hoe het ooit was. Zo wordt het een virtueel monument voor een verdwenen stuk Nigeriaans erfgoed.
 
 
@@ -31,9 +32,9 @@ Legacy
 
 Femke van Zeijl, femke@fvz-journaliste.nl
 
-Aanvraag: 23-05-22
+Inquiry: 23-05-22
 
-Oplevering: 23-06-22
+Deadline: 23-06-22
 
 ### Background information
 
