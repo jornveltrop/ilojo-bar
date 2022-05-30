@@ -20,15 +20,15 @@ As an artist/visitor I want to be able to add a story to the website, so that I 
  As a resident from Lagos, member of the Nigerian diaspora of interested world citizen, I want to get a virtual impression of the building, so that I can see how it was in the earlier days. This way it will become a virtual monument of the vanished piece of Nigerian heritage
 
 ## Client <a name="Client">
-Legacy | The Historical and Environmental Group of Nigeria, in de persoon van Femke van Zeijl, hoofd onderzoek.
+Legacy | The Historical and Environmental Group of Nigeria, with in person Femky van Zijel, head of the research.
 
 ## Week 1 - Debriefing
 
 ### Contact information
 
-Legacy 
+Client: Legacy 
 
-Femke van Zeijl, femke@fvz-journaliste.nl
+Contact: Femke van Zeijl, femke@fvz-journaliste.nl
 
 Inquiry: 23-05-22
 
@@ -36,38 +36,41 @@ Deadline: 23-06-22
 
 ### Background information
 
-Legacy | The Historical and Environmental Group of Nigeria, in de persoon van Femke van Zeijl, hoofd onderzoek
-
+Legacy | The Historical and Environmental Group of Nigeria, with in person Femky van Zijel, head of the research.
+ 
 ### Job description
 
-Legacy wil dat alle verhalen van iloja bar bij elkaar worden gebracht en het gebouw visueel laten zien inclusief de verhalen. 
+Legacy want all the stories brought together and have a visual representation of the building with the stories included.
 
 ### Motive
 
-De reden dat we dit maken is omdat het gebouw sinds 2016 is verwoest. Alosianen zien niet meer wat het was en de verhalen over wat er allemaal in is beleefd. Het was eens een nationaal monument en is nu vergeten. Legacy wil daarom dat mensen weten hoe bijzonder het gebouw was en wat het zo speciaal maakte. 
+The reason of making this, is that the building was destroyed since 2016. Alosians will never know the amazing stories from withing the building. It was once a national monument which is now forgotten. That's why legacy want to let people know how special that building was and why. 
 
 ### Objective
 
-Het doel is om het gebouw te herdenken. Breng alle verhalen bij elkaar, laat het gebouw virtueel zien en koppel dat met elkaar. 
+The purpose is to let people know the stories of the building of how it once was. See how beautiful it all was. 
 
 ### Produce
 
-Wat wij gaan opleveren is een web visualisatie van het gebouw en zijn geschiedenis. Je kan door de verhalen heen gaan. We gaan meerdere prototypes maken en deze voorleggen aan Legacy. 
+Our product will be a visualisation of the building and it's history. You can go through the stories with a fun visualisation. We will make multiple prototypes and present them to Legacy.  
  
 ### Conditions
 
-De deadline voor de eerste sprint is op 3 juni om 13:00. We willen dan een werkend prototype hebben om te laten zien wat wij voor ogen hebben. Het is noodzakelijk voor het project dat we de verhalen hebben van iloja bar. We moeten dit namelijk toepassen in een API en laten zien op de website. Een visualisatie van het gebouw zelf is ook iets wat de opdrachtgever graag wilt. 
+The deadline of the first sprint is on the third of june at 13:00. We want to make a working prototype to show what we have envisioned. It is necessary that you can go through the stories of Iloja bar, that is something Legacy explicitly want. We have to apply this with our own working API on the website. Legacy also wants a visualisation of the building. 
 
 ### Target audience
 
-De doelgroep voor dit project zijn de lagosianen. Legacy wilt graag dat ze nog weten van deze cultuur. Wel goed om te weten is dat deze doelgroep veel gebruikt maakt van hun telefoons en de meeste zijn redelijk oud, dus goede web support is nodig. Daarnaast hebben ze niet de beste internet dus het is handig om een niet al te zware website te bouwen. Daarnaast willen ze de lagosianen in het buitenland ook willen bereiken. Voor de rest kan het zijn dat mensen die geinterreseerd zijn in de geschiedenis behoren in de doelgroep, maar hier ligt niet de focus. 
-
+The target audience of the project are the lagosians. Legacy wants them to know their culture and history. A thing that is good to know about these people is that they use their phones a lot and most of them are older versions. That's why we need good support. Beside that they also have bad internet, which is why we also need to take into account that our website should not be that heavy. The most used browser are these in Nigeria:
+ 
+<img src="https://user-images.githubusercontent.com/44086608/170000883-ad26c145-7519-4990-ae5c-0eda60a75d83.png" width="800">
+  
+Legacy also wants to reach out the Lagosians abroad. At last some people can visit who are interested in history, but these people are not the main focus. 
+ 
+ 
 ### Relationshup with other projects
-Het valt onder Legacy. Legacy houdt zich vaker bezig met erfgoeden in Nigeria. Helaas hebben we hier geen voorbeeld van. 
+It falls under Legacy. Legacy keeps busy with other heritages in Nigeria. Sadly we don't have any examples. 
 
 
 ## License <a name="License">
 
-![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
-
-This work is licensed under [GNU GPLv3](./LICENSE).
+This work is licensed under [MIT](./LICENSE).
