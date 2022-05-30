@@ -33,6 +33,11 @@ main {
 ol {
     width: 100%;
     height: 100%;
-    background: var(--blue);
     padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 1em 0;
+    background: var(--blue);
 }

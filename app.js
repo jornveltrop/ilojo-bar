@@ -1,61 +1,75 @@
 // Requires
-require('dotenv').config()
-
-const express = require('express');
-const hbs  = require('express-handlebars');
-const handlebars = hbs.engine;
-const compression = require('compression')
-const fetch = require('node-fetch')
-
-const path = require('path');
-const { fileURLToPath } = require('url');
-const prismicH = require('@prismicio/helpers');
-const { client } = require('./config/prismicConfig.js')
-
+import 'dotenv/config';
+import express from 'express'
+import { engine } from 'express-handlebars';
+import * as prismicH from '@prismicio/helpers'
+import { client } from './config/prismicConfig.js'
 
 //Variabelen
 const app = express();
-const apiKey = process.env.APIKEY;
 const port = process.env.PORT || 3000;
-
-// Compress alle responses
-app.use(compression())
+// const apiKey = process.env.APIKEY;
 
 // Aangeven waar onze statishce files zich bevinden  
 app.use(express.static('static'));
 
 
 // Templating engine
-app.engine('hbs', handlebars({extname: '.hbs'}));
+app.engine("hbs", engine({ 
+    helpers:  {
+        PrismicText: (data) => {
+            return prismicH.RichText.asText(data, PrismicConfig.linkResolver)
+        }
+    },
+    extname: ".hbs" }))
 app.set('view engine', 'hbs');
 app.set('views', './views');
 
 
 app.use((req, res, next) => {
     res.locals.ctx = {
-        prismicH,
+      prismicH,
     }
     next()
 })
 
-const ref = 'Yo8xXBMAACEAdDDP'
-
 //Routing
 app.get('/', async (req, res) => {
-    const document = await fetch(`https://ilojo-bar.prismic.io/api/v2/documents/`)
-    console.log(document)
-    res.render('home', { document })
+    let homepage = await client.getSingle('homepage')
+    let homepageData = homepage.data
+    console.log(homepageData)
+
+    let title = homepageData.title[0].text
+    let subtitle = homepageData.subtitle[0].text
+    res.render('home', { title, subtitle })
 });
 
 //Routing
-app.get('/discover', (req, res) => {
-    res.render('discover', {
-        title: 'discover'})
+app.get('/discover', async (req, res) => {
+    let stories = await client.getAllByType('story', {
+        orderings: {
+          field: 'my.story.id',
+          direction: 'asc'
+        }
+      })
+
+    let discoverList = stories.map(story => {
+        return {
+            "url": story.url, 
+            "title": story.data.title[0].text
+        }
+    })
+    
+    res.render('discover', { discoverList })
 });
 
-app.get('/discover/:id', (req, res) => {
-    res.render('detail', {
-        title: 'home'})
+app.get('/discover/:id', async (req, res) => {
+    let uid = req.params.id
+    let story = await client.getByUID('story', uid)
+    let storyData = story.data
+    console.log(storyData)
+
+    res.render('story', { storyData })
 })
 
 // Set server
