@@ -9,6 +9,8 @@ const light = new THREE.PointLight()
 light.position.set(0.8, 1.4, 1.0)
 scene.add(light)
 
+let buildingObj;
+
 const ambientLight = new THREE.AmbientLight()
 scene.add(ambientLight)
 
@@ -24,7 +26,11 @@ const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
-let buildingObj;
+/*
+const controls = new OrbitControls(camera, renderer.domElement)
+controls.enableDamping = true
+controls.target.set(0, 1, 0)
+*/
 
 //const material = new THREE.MeshNormalMaterial()
 
@@ -32,14 +38,14 @@ const fbxLoader = new FBXLoader()
 fbxLoader.load(
     'models/building.fbx',
     (object) => {
-         object.traverse(function (child) {
-             if ((child as THREE.Mesh).isMesh) {
-                 // (child as THREE.Mesh).material = material
-                 if ((child as THREE.Mesh).material) {
-                     ((child as THREE.Mesh).material as THREE.MeshBasicMaterial).transparent = false
-                 }
-             }
-         })
+        // object.traverse(function (child) {
+        //     if ((child as THREE.Mesh).isMesh) {
+        //         // (child as THREE.Mesh).material = material
+        //         if ((child as THREE.Mesh).material) {
+        //             ((child as THREE.Mesh).material as THREE.MeshBasicMaterial).transparent = false
+        //         }
+        //     }
+        // })
         object.scale.set(.04, .04, .04)
         buildingObj = object;
         scene.add(object)
@@ -62,8 +68,11 @@ function onWindowResize() {
 
 function animate() {
     requestAnimationFrame(animate)
+
     if(buildingObj)
         buildingObj.rotation.y -= 0.005;
+
+    //controls.update()
 
     render()
 }
