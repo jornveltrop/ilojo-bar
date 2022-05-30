@@ -22,9 +22,7 @@ const camera = new THREE.PerspectiveCamera(
 )
 camera.position.set(0, 0.2, 1.0)
 
-const renderer = new THREE.WebGLRenderer()
-renderer.setSize(window.innerWidth, window.innerHeight)
-document.body.appendChild(renderer.domElement)
+const container = document.querySelector('#scene-container');
 
 /*
 const controls = new OrbitControls(camera, renderer.domElement)
@@ -80,5 +78,11 @@ function animate() {
 function render() {
     renderer.render(scene, camera)
 }
+
+const renderer = new THREE.WebGLRenderer()
+renderer.setSize(window.innerWidth, window.innerHeight)
+// add the automatically created <canvas> element to the page
+container.append(renderer.domElement);
+renderer.domElement.classList.add("modelCanvas");
 
 animate()
