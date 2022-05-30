@@ -1,9 +1,10 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
-import Stats from 'three/examples/jsm/libs/stats.module'
+import { OrbitControls } from '/jsm/controls/OrbitControls'
+import { FBXLoader } from '/jsm/loaders/FBXLoader'
+import Stats from '/jsm/libs/stats.module'
 
 const scene = new THREE.Scene()
+scene.background = transparent;
 
 const light = new THREE.PointLight()
 light.position.set(0.8, 1.4, 1.0)
@@ -15,10 +16,10 @@ const ambientLight = new THREE.AmbientLight()
 scene.add(ambientLight)
 
 const camera = new THREE.PerspectiveCamera(
-    50,
+    45,
     window.innerWidth / window.innerHeight,
     0.1,
-    1000
+    2000
 )
 camera.position.set(0, 0.2, 1.0)
 
@@ -79,10 +80,16 @@ function render() {
     renderer.render(scene, camera)
 }
 
-const renderer = new THREE.WebGLRenderer()
+renderer = new THREE.WebGLRenderer({ 
+    canvas: canvas;
+    alpha: true 
+});
+renderer.setClearColor(0xffffff, 0);
 renderer.setSize(window.innerWidth, window.innerHeight)
+
 // add the automatically created <canvas> element to the page
 container.append(renderer.domElement);
-renderer.domElement.classList.add("modelCanvas");
+const canvas = renderer.domElement;
+canvas.classList.add("modelCanvas");
 
 animate()

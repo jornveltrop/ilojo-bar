@@ -33,7 +33,6 @@
     "webpack-merge": "^5.8.0"
   },
   "scripts": {
-    "dev": "webpack serve --config ./src/client/webpack.dev.js",
     "start": "nodemon app.js",
     "test": "test-commando"
   },
