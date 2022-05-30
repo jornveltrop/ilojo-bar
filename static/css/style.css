@@ -2,6 +2,8 @@
     --dark: #101010;
     --light: #F3F3F3;
     --grey: #c7c7c7;
+    --red: rgb(226, 101, 101);
+    --blue: rgb(101, 113, 226);
   }
 
 * { 
@@ -15,4 +17,22 @@ html, body {
     margin: 0;
     position: relative;
     scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+header {
+    background: rgb(226, 101, 101);
+    color: var(--light);
+    padding: .8em 1em;
+}
+
+main {
+    padding: .8em 1em;
+}
+
+ol {
+    width: 100%;
+    height: 100%;
+    background: var(--blue);
+    padding: 0;
 }
