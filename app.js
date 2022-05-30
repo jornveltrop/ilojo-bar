@@ -1,9 +1,9 @@
 // Requires
 import 'dotenv/config';
 import express from 'express'
-import { engine } from 'express-handlebars';
 import * as prismicH from '@prismicio/helpers'
 import { client } from './config/prismicConfig.js'
+import expressLayouts from 'express-ejs-layouts';
 
 //Variabelen
 const app = express();
@@ -15,15 +15,9 @@ app.use(express.static('static'));
 
 
 // Templating engine
-app.engine("hbs", engine({ 
-    helpers:  {
-        PrismicText: (data) => {
-            return prismicH.RichText.asText(data, PrismicConfig.linkResolver)
-        }
-    },
-    extname: ".hbs" }))
-app.set('view engine', 'hbs');
-app.set('views', './views');
+app.use(expressLayouts)
+app.set('layout', './layouts/main')
+app.set('view engine', 'ejs');
 
 
 app.use((req, res, next) => {
@@ -37,7 +31,7 @@ app.use((req, res, next) => {
 app.get('/', async (req, res) => {
     let homepage = await client.getSingle('homepage')
     let homepageData = homepage.data
-    console.log(homepageData)
+    // console.log(homepageData)
 
     let title = homepageData.title[0].text
     let subtitle = homepageData.subtitle[0].text
@@ -67,7 +61,7 @@ app.get('/discover/:id', async (req, res) => {
     let uid = req.params.id
     let story = await client.getByUID('story', uid)
     let storyData = story.data
-    console.log(storyData)
+    // console.log(storyData)
 
     res.render('story', { storyData })
 })

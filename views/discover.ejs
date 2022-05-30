@@ -1,0 +1,14 @@
+<%- include('./partials/header.ejs') %>
+
+<main>
+    <h1>Discover</h1>
+    <ol>
+        <% discoverList.forEach(story => { %>
+            <li> 
+                <a href="<%- story.url %>"><%- story.title %></a>
+            </li>
+       <% }); %>
+    </ol>
+</main>
+
+
