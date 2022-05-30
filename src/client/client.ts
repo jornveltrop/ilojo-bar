@@ -4,7 +4,6 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 import Stats from 'three/examples/jsm/libs/stats.module'
 
 const scene = new THREE.Scene()
-scene.add(new THREE.AxesHelper(5))
 
 const light = new THREE.PointLight()
 light.position.set(0.8, 1.4, 1.0)
@@ -14,20 +13,18 @@ const ambientLight = new THREE.AmbientLight()
 scene.add(ambientLight)
 
 const camera = new THREE.PerspectiveCamera(
-    75,
+    50,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
 )
-camera.position.set(0.8, 1.4, 1.0)
+camera.position.set(0, 0.2, 1.0)
 
 const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
-const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableDamping = true
-controls.target.set(0, 1, 0)
+let buildingObj;
 
 //const material = new THREE.MeshNormalMaterial()
 
@@ -35,15 +32,16 @@ const fbxLoader = new FBXLoader()
 fbxLoader.load(
     'models/building.fbx',
     (object) => {
-        // object.traverse(function (child) {
-        //     if ((child as THREE.Mesh).isMesh) {
-        //         // (child as THREE.Mesh).material = material
-        //         if ((child as THREE.Mesh).material) {
-        //             ((child as THREE.Mesh).material as THREE.MeshBasicMaterial).transparent = false
-        //         }
-        //     }
-        // })
-        // object.scale.set(.01, .01, .01)
+         object.traverse(function (child) {
+             if ((child as THREE.Mesh).isMesh) {
+                 // (child as THREE.Mesh).material = material
+                 if ((child as THREE.Mesh).material) {
+                     ((child as THREE.Mesh).material as THREE.MeshBasicMaterial).transparent = false
+                 }
+             }
+         })
+        object.scale.set(.04, .04, .04)
+        buildingObj = object;
         scene.add(object)
     },
     (xhr) => {
@@ -62,17 +60,12 @@ function onWindowResize() {
     render()
 }
 
-const stats = Stats()
-document.body.appendChild(stats.dom)
-
 function animate() {
     requestAnimationFrame(animate)
-
-    controls.update()
+    if(buildingObj)
+        buildingObj.rotation.y -= 0.005;
 
     render()
-
-    stats.update()
 }
 
 function render() {
