@@ -1,0 +1,14 @@
+{{> header }}
+
+<main>
+    <h1>Discover</h1>
+    <ol>
+        {{#each discoverList}}
+            <li> 
+                <a href="{{this.url}}">{{this.title}}</a>
+            </li>
+        {{/each}}
+    </ol>
+</main>
+
+
