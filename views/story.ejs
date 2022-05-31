@@ -3,6 +3,20 @@
 <main>
     <%- ctx.prismicH.asHTML(storyData.title) %>
     <%- ctx.prismicH.asHTML(storyData.content) %>
+
+    <div class="buttonHolder" >
+
+        <% if(previous){ %>
+            <btn class="button" type="button">
+                <a href= <%-previous.url%>>Previous</a>
+            </btn>
+        <% } %>
+        <% if(next){ %>
+            <btn class="button" type="button">
+                <a href= <%-next.url%>>Next</a>
+            </btn>
+        <% } %>
+    </div>
 </main>
 
 

@@ -5,7 +5,11 @@
     <h1><%- title %></h1>
     <h3><%- subtitle %></h3>
     <div id="scene-container"></div>
-    <button id="buttonHomePage" type="button">Explore</button>
+    <button id="buttonHomePage" type="button">
+        <a href="/discover">
+            Explore
+        </a>
+    </button>
 </main>
 
 <script type="importmap">
@@ -17,4 +21,3 @@
 </script>
 
 <script type="module" src="/three.js"></script>
-<script defer src="/js/UI_home.js"></script>

@@ -31,7 +31,6 @@ app.use((req, res, next) => {
 app.get('/', async (req, res) => {
     let homepage = await client.getSingle('homepage')
     let homepageData = homepage.data
-    // console.log(homepageData)
 
     let title = homepageData.title[0].text
     let subtitle = homepageData.subtitle[0].text
@@ -58,15 +57,49 @@ app.get('/discover', async (req, res) => {
 });
 
 app.get('/discover/:id', async (req, res) => {
+    let stories = await client.getAllByType('story', {
+        orderings: {
+          field: 'my.story.id',
+          direction: 'asc'
+        }
+      })
+
     let uid = req.params.id
     let story = await client.getByUID('story', uid)
     let storyData = story.data
-    // console.log(storyData)
+    let id = storyData.id - 1;
 
-    res.render('story', { storyData })
+    let previous = getPreviousStory(id, stories);
+    let next = getNextStory(id, stories);
+
+    res.render('story', { 
+        storyData,
+        previous,
+        next
+    })
 })
 
 // Set server
 app.listen(port, () => {
     console.log(`Gebruikte poort: localhost:${port} !`)
 });
+
+function getPreviousStory(id, stories){
+    if(id < 0)
+        return;
+    
+    let previousId = id - 1
+
+    let previousStory = stories[previousId];
+    return previousStory;
+}
+
+function getNextStory(id, stories){
+    if(id > stories.length)
+        return;
+    
+    let nextId = id + 1
+
+    let nextStory = stories[nextId];
+    return nextStory;
+}
