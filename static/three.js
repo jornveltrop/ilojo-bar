@@ -63,6 +63,18 @@ function onWindowResize() {
     render()
 }
 
+function resizeRendererToDisplaySize() {
+    const canvas = renderer.domElement;
+    const pixelRatio = window.devicePixelRatio;
+    const width  = canvas.clientWidth  * pixelRatio | 0;
+    const height = canvas.clientHeight * pixelRatio | 0;
+    const needResize = canvas.width !== width || canvas.height !== height;
+    if (needResize) {
+      renderer.setSize(width, height, false);
+    }
+    return needResize;
+  }
+
 function animate() {
     requestAnimationFrame(animate)
 
@@ -76,6 +88,12 @@ function animate() {
 
 function render() {
     renderer.render(scene, camera)
+
+    if (resizeRendererToDisplaySize()) {
+        const canvas = renderer.domElement;
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
+    }
     
     //disable vertical movement plus zooming
     controls.minPolarAngle = Math.PI/2;
