@@ -4,8 +4,8 @@ import { OrbitControls } from './jsm/controls/OrbitControls.js';
 import { FBXLoader } from './jsm/loaders/FBXLoader.js';
 
 const scene = new THREE.Scene()
-const light = new THREE.PointLight()
-const ambientLight = new THREE.AmbientLight()
+const light = new THREE.PointLight('white', 0.5, 0, 2)
+const ambientLight = new THREE.AmbientLight(0x606060)
 const fbxLoader = new FBXLoader()
 const renderer = new THREE.WebGLRenderer({
     alpha:true
