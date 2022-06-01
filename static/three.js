@@ -19,7 +19,7 @@ const camera = new THREE.PerspectiveCamera(
 const controls = new OrbitControls(camera, renderer.domElement)
 const container = document.querySelector('#scene-container');
 
-light.position.set(0.8, 1.4, 1.0)
+light.position.set(1, 1.0, 0.2)
 scene.add(light)
 scene.add(ambientLight)
 
@@ -35,15 +35,12 @@ let buildingObj;
 fbxLoader.load(
     'models/building.fbx',
     (object) => {
-        // object.traverse(function (child) {
-        //     if ((child as THREE.Mesh).isMesh) {
-        //         // (child as THREE.Mesh).material = material
-        //         if ((child as THREE.Mesh).material) {
-        //             ((child as THREE.Mesh).material as THREE.MeshBasicMaterial).transparent = false
-        //         }
-        //     }
-        // })
-        object.scale.set(.25, .25, .25)
+        object.traverse(function (child) {
+            if ( child.isMesh ) {
+                
+            }
+        })
+        object.scale.set(.02, .02, .02)
         buildingObj = object;
         scene.add(object)
     },
@@ -79,7 +76,7 @@ function animate() {
     requestAnimationFrame(animate)
 
     if(buildingObj)
-        buildingObj.rotation.y -= 0.005;
+        buildingObj.rotation.y -= 0.002;
 
     controls.update()
 
