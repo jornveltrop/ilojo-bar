@@ -4,9 +4,9 @@ import { OrbitControls } from './jsm/controls/OrbitControls.js';
 import { FBXLoader } from './jsm/loaders/FBXLoader.js';
 
 const scene = new THREE.Scene()
-const light = new THREE.PointLight('white', 0.5, 0, 2)
-const ambientLight = new THREE.AmbientLight(0x606060)
 const fbxLoader = new FBXLoader()
+const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 1)
+const spotLight = new THREE.SpotLight(0xffa95c, 0.3)
 const renderer = new THREE.WebGLRenderer({
     alpha:true
 })
@@ -19,9 +19,16 @@ const camera = new THREE.PerspectiveCamera(
 const controls = new OrbitControls(camera, renderer.domElement)
 const container = document.querySelector('#scene-container');
 
-light.position.set(1, 1.0, 0.2)
-scene.add(light)
-scene.add(ambientLight)
+spotLight.castShadow = true;
+spotLight.shadow.bias = -0.00001;
+spotLight.shadow.mapSize.width = 1024*4;
+spotLight.shadow.mapSize.height = 1024*4;
+
+scene.add(hemiLight)
+scene.add(spotLight)
+renderer.toneMapping = THREE.LinearToneMapping;
+renderer.toneMappingExposure = 1.5;
+renderer.shadowMap.enabled = true;
 
 controls.enableDamping = true
 controls.target.set(0, 1, 0)
@@ -30,14 +37,17 @@ camera.position.set(0, 10, 1.0)
 
 let buildingObj;
 
-//const material = new THREE.MeshNormalMaterial()
-
 fbxLoader.load(
     'models/building.fbx',
     (object) => {
         object.traverse(function (child) {
             if ( child.isMesh ) {
-                
+                child.castShadow = true;
+                child.receiveShadow = true;
+                if(child.material.map)
+                    child.material.map.anisotropy = 16;
+                if(child.material)
+                    child.material.side = THREE.DoubleSide;
             }
         })
         object.scale.set(.02, .02, .02)
@@ -74,6 +84,12 @@ function resizeRendererToDisplaySize() {
 
 function animate() {
     requestAnimationFrame(animate)
+
+    spotLight.position.set(
+        camera.position.x + 10,        
+        camera.position.y + 10,
+        camera.position.z + 10,
+    )
 
     if(buildingObj)
         buildingObj.rotation.y -= 0.002;
