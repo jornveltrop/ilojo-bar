@@ -5,7 +5,7 @@ import { FBXLoader } from './jsm/loaders/FBXLoader.js';
 
 const scene = new THREE.Scene()
 const fbxLoader = new FBXLoader()
-const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 1)
+const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 0.8)
 const spotLight = new THREE.SpotLight(0xffa95c, 0.3)
 const renderer = new THREE.WebGLRenderer({
     alpha:true
@@ -38,7 +38,7 @@ camera.position.set(0, 10, 1.0)
 let buildingObj;
 
 fbxLoader.load(
-    'models/building.fbx',
+    'models/test.fbx',
     (object) => {
         object.traverse(function (child) {
             if ( child.isMesh ) {
