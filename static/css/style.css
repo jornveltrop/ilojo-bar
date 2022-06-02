@@ -4,6 +4,10 @@
     --grey: #c7c7c7;
     --red: rgb(226, 101, 101);
     --blue: rgb(101, 113, 226);
+    --column-size: min(100%, 500px);
+	--slider-size: min(100%, 460px);
+	--slider-border-radius: 2em;
+	--slider-fullbleed-gap: 40px;
 }
 
 * {
@@ -33,30 +37,98 @@ h1 {
     font-size: 4em;
 }
 
+.story h1 {
+    font-size: 2.3em;
+}
+
 h3 {
     font-size: 2em;
 }
 
 header {
-    background: rgb(226, 101, 101);
+    background: rgb(86, 86, 86);
     color: var(--light);
     padding: .8em 1em;
+    display: flex;
+    justify-content: center;
 }
 
 main {
     padding: .8em 1em;
 }
 
+.discover {
+    background: url(/images/stone_bg.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+}
+
 ol {
-    width: 100%;
-    height: 100%;
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
+ol {
+	display: flex;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	width: var(--slider-size);
+}
+
+/* Hide Scrollbar itself */
+ol {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+ol::-webkit-scrollbar {
+  display: none;
+}
+
 li {
-    margin: 1em 0;
-    background: var(--blue);
+	scroll-snap-align: center;
+	flex: 0 0 var(--slider-size);
+	width: var(--slider-size);
+	display: flex;
+}
+
+.liWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+	min-height: 800px;
+    position: relative;
+    z-index: 2;
+    padding: 16em 6em 16em 6em;
+}
+
+.liWrapper h3 {
+    font-size: 1.2em;
+}
+
+
+.liWrapper a {
+    text-decoration: none;
+    color: var(--light);
+    background: var(--dark);
+    padding: 1em 1.2em;
+    border-radius: .2em;
+    text-transform: uppercase;
+    font-size: .9em;
+}
+
+.backCon {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+li img {
+    width: 100%;
 }
 
 p {

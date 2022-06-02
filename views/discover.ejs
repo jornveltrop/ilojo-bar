@@ -1,11 +1,17 @@
 <%- include('./partials/header.ejs') %>
 
-<main>
-    <h1>Discover</h1>
+<main class="discover"> 
     <ol>
         <% discoverList.forEach(story => { %>
             <li> 
-                <a href="<%- story.url %>"><%- story.title %></a>
+                <div class="liWrapper">
+                    <div class="backCon">
+                        <img src="/images/window.png" />
+                    </div>
+                    <h3><%- story.title %></h3>
+                    
+                    <a href="<%- story.url %>">Discover</a>
+                </div>
             </li>
        <% }); %>
     </ol>
