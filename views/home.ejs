@@ -1,21 +1,13 @@
-<main>
+<main class="home">
 
-    <h1><%- title %></h1>
-    <h3><%- subtitle %></h3>
-    <div id="scene-container"></div>
-    <button id="buttonHomePage" type="button">
+    <img src="/images/Logo_IlojoBar.svg" class="logo">
+    <h2><%- subtitle %></h2>
+
+    <div class="IlojoBar_con">
+        <img src="/images/Ilojo_Bar.png" class="ilogoBar_img">
+    </div>
+
         <a href="/discover">
-            Explore
+            Discover stories
         </a>
-    </button>
 </main>
-
-<script type="importmap">
-    {
-        "imports": {
-            "three": "../build/three.module.js"
-        }
-    }
-</script>
-
-<script type="module" src="/three.js"></script>
