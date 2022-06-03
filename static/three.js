@@ -5,8 +5,8 @@ import { FBXLoader } from './jsm/loaders/FBXLoader.js';
 
 const scene = new THREE.Scene()
 const fbxLoader = new FBXLoader()
-const hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 0.8)
-const spotLight = new THREE.SpotLight(0xffa95c, 0.3)
+const hemiLight = new THREE.HemisphereLight('white', 'white', 1)
+const spotLight = new THREE.SpotLight('white', 0.3)
 const renderer = new THREE.WebGLRenderer({
     alpha:true
 })
@@ -19,16 +19,16 @@ const camera = new THREE.PerspectiveCamera(
 const controls = new OrbitControls(camera, renderer.domElement)
 const container = document.querySelector('#scene-container');
 
-spotLight.castShadow = true;
-spotLight.shadow.bias = -0.00001;
-spotLight.shadow.mapSize.width = 1024*4;
-spotLight.shadow.mapSize.height = 1024*4;
+//spotLight.castShadow = true;
+//spotLight.shadow.bias = -0.00001;
+//spotLight.shadow.mapSize.width = 1024*4;
+//spotLight.shadow.mapSize.height = 1024*4;
 
 scene.add(hemiLight)
-scene.add(spotLight)
-renderer.toneMapping = THREE.LinearToneMapping;
-renderer.toneMappingExposure = 1.5;
-renderer.shadowMap.enabled = true;
+//scene.add(spotLight)
+//renderer.toneMapping = THREE.LinearToneMapping;
+//renderer.toneMappingExposure = 1.5;
+//renderer.shadowMap.enabled = true;
 
 controls.enableDamping = true
 controls.target.set(0, 1, 0)
@@ -38,14 +38,14 @@ camera.position.set(0, 10, 1.0)
 let buildingObj;
 
 fbxLoader.load(
-    'models/test.fbx',
+    'models/building.fbx',
     (object) => {
         object.traverse(function (child) {
             if ( child.isMesh ) {
-                child.castShadow = true;
-                child.receiveShadow = true;
-                if(child.material.map)
-                    child.material.map.anisotropy = 16;
+                //child.castShadow = true;
+                //child.receiveShadow = true;
+                //if(child.material.map)
+                    //child.material.map.anisotropy = 2;
                 if(child.material)
                     child.material.side = THREE.DoubleSide;
             }

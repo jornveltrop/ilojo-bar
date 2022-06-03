@@ -22,7 +22,7 @@ body {
     margin: 0;
     position: relative;
     scroll-behavior: smooth;
-    background-color: var(--light);
+    background-color: var(--red);
     font-family: sans-serif;
 
     overflow-x: hidden;
