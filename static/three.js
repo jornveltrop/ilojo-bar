@@ -1,17 +1,21 @@
 import * as THREE from 'three';
-import Stats from './jsm/libs/stats.module.js';
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
 import { FBXLoader } from './jsm/loaders/FBXLoader.js';
 
 let scene, fbxLoader, hemiLight, spotLight, renderer, 
-    camera, controls, container, buildingObj, buildingImg;
+    camera, controls, container, buildingObj, buildingImg,
+    model;
 
 var checkbox = document.querySelector("input[name=checkbox]");
+buildingImg = document.getElementById("IlojaBarImg");
 checkbox.addEventListener('change', function() {
     if (this.checked) {
-       seeModel();
+        if(!model) { seeModel(); }
+        buildingImg.classList.add("hidden");
+        if(model) {model.classList.remove("hidden") }
     } else {
-        removeModel();
+        buildingImg.classList.remove("hidden");
+        model.classList.add("hidden")
     }
   });
 
@@ -33,33 +37,18 @@ function seeModel(){
     controls = new OrbitControls(camera, renderer.domElement)
     container = document.querySelector('#scene-container');
 
-    //spotLight.castShadow = true;
-    //spotLight.shadow.bias = -0.00001;
-    //spotLight.shadow.mapSize.width = 1024*4;
-    //spotLight.shadow.mapSize.height = 1024*4;
-
     scene.add(hemiLight)
-    //scene.add(spotLight)
-    //renderer.toneMapping = THREE.LinearToneMapping;
-    //renderer.toneMappingExposure = 1.5;
-    //renderer.shadowMap.enabled = true;
 
     controls.enableDamping = true
     controls.target.set(0, 1, 0)
 
     camera.position.set(0, 10, 1.0)
 
-    buildingObj;
-
     fbxLoader.load(
         'models/building.fbx',
         (object) => {
             object.traverse(function (child) {
                 if ( child.isMesh ) {
-                    //child.castShadow = true;
-                    //child.receiveShadow = true;
-                    //if(child.material.map)
-                        //child.material.map.anisotropy = 2;
                     if(child.material)
                         child.material.side = THREE.DoubleSide;
                 }
@@ -82,22 +71,11 @@ function seeModel(){
     renderer.setClearColor( 0x000000, 0 ); // the default
 
     // add the automatically created <canvas> element to the page
+    model = renderer.domElement;
     container.append(renderer.domElement);
     renderer.domElement.classList.add("modelCanvas");
 
     animate()
-}
-
-function removeModel(){
-    while(scene.children.length > 0){ 
-        scene.remove(scene.children[0]); 
-    }
-
-    buildingImg = document.createElement("img");
-    img.src = "/images/Ilojo_Bar.png";
-    img.classList.add("ilogoBar_img");
-    container.append(renderer.domElement);
-    renderer.domElement.classList.add(img);
 }
 
 function onWindowResize() {
