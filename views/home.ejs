@@ -1,13 +1,21 @@
-<main>
+<main class="home">
+    <img src="/images/Logo_IlojoBar.svg" class="logo">
+    <h2><%- subtitle %></h2>
 
-    <h1><%- title %></h1>
-    <h3><%- subtitle %></h3>
     <div id="scene-container"></div>
-    <button id="buttonHomePage" type="button">
-        <a href="/discover">
-            Explore
-        </a>
-    </button>
+
+    <div class="IlojoBar_con">
+        <img src="/images/Ilojo_Bar.png" class="ilogoBar_img">
+    </div>
+
+    <label class="switch">
+        <input type="checkbox" name="checkbox">
+        <span class="slider round"></span>
+      </label>
+
+    <a href="/discover">
+        Discover stories
+    </a>
 </main>
 
 <script type="importmap">
@@ -19,3 +27,4 @@
 </script>
 
 <script type="module" src="/three.js"></script>
+

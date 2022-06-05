@@ -3,66 +3,103 @@ import Stats from './jsm/libs/stats.module.js';
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
 import { FBXLoader } from './jsm/loaders/FBXLoader.js';
 
-const scene = new THREE.Scene()
-const fbxLoader = new FBXLoader()
-const hemiLight = new THREE.HemisphereLight('white', 'white', 1)
-const spotLight = new THREE.SpotLight('white', 0.3)
-const renderer = new THREE.WebGLRenderer({
-    alpha:true
-})
-const camera = new THREE.PerspectiveCamera(
-    45,
-    window.innerWidth / window.innerHeight,
-    1,
-    1000
-)
-const controls = new OrbitControls(camera, renderer.domElement)
-const container = document.querySelector('#scene-container');
+let scene, fbxLoader, hemiLight, spotLight, renderer, 
+    camera, controls, container, buildingObj, buildingImg;
 
-//spotLight.castShadow = true;
-//spotLight.shadow.bias = -0.00001;
-//spotLight.shadow.mapSize.width = 1024*4;
-//spotLight.shadow.mapSize.height = 1024*4;
-
-scene.add(hemiLight)
-//scene.add(spotLight)
-//renderer.toneMapping = THREE.LinearToneMapping;
-//renderer.toneMappingExposure = 1.5;
-//renderer.shadowMap.enabled = true;
-
-controls.enableDamping = true
-controls.target.set(0, 1, 0)
-
-camera.position.set(0, 10, 1.0)
-
-let buildingObj;
-
-fbxLoader.load(
-    'models/building.fbx',
-    (object) => {
-        object.traverse(function (child) {
-            if ( child.isMesh ) {
-                //child.castShadow = true;
-                //child.receiveShadow = true;
-                //if(child.material.map)
-                    //child.material.map.anisotropy = 2;
-                if(child.material)
-                    child.material.side = THREE.DoubleSide;
-            }
-        })
-        object.scale.set(.02, .02, .02)
-        buildingObj = object;
-        scene.add(object)
-    },
-    (xhr) => {
-        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
-    },
-    (error) => {
-        console.log(error)
+var checkbox = document.querySelector("input[name=checkbox]");
+checkbox.addEventListener('change', function() {
+    if (this.checked) {
+       seeModel();
+    } else {
+        removeModel();
     }
-)
+  });
 
-window.addEventListener('resize', onWindowResize, false)
+
+function seeModel(){
+    scene = new THREE.Scene()
+    fbxLoader = new FBXLoader()
+    hemiLight = new THREE.HemisphereLight('white', 'white', 1)
+    spotLight = new THREE.SpotLight('white', 0.3)
+    renderer = new THREE.WebGLRenderer({
+        alpha:true
+    })
+    camera = new THREE.PerspectiveCamera(
+        45,
+        window.innerWidth / window.innerHeight,
+        1,
+        1000
+    )
+    controls = new OrbitControls(camera, renderer.domElement)
+    container = document.querySelector('#scene-container');
+
+    //spotLight.castShadow = true;
+    //spotLight.shadow.bias = -0.00001;
+    //spotLight.shadow.mapSize.width = 1024*4;
+    //spotLight.shadow.mapSize.height = 1024*4;
+
+    scene.add(hemiLight)
+    //scene.add(spotLight)
+    //renderer.toneMapping = THREE.LinearToneMapping;
+    //renderer.toneMappingExposure = 1.5;
+    //renderer.shadowMap.enabled = true;
+
+    controls.enableDamping = true
+    controls.target.set(0, 1, 0)
+
+    camera.position.set(0, 10, 1.0)
+
+    buildingObj;
+
+    fbxLoader.load(
+        'models/building.fbx',
+        (object) => {
+            object.traverse(function (child) {
+                if ( child.isMesh ) {
+                    //child.castShadow = true;
+                    //child.receiveShadow = true;
+                    //if(child.material.map)
+                        //child.material.map.anisotropy = 2;
+                    if(child.material)
+                        child.material.side = THREE.DoubleSide;
+                }
+            })
+            object.scale.set(.02, .02, .02)
+            buildingObj = object;
+            scene.add(object)
+        },
+        (xhr) => {
+            console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+        },
+        (error) => {
+            console.log(error)
+        }
+    )
+    
+    window.addEventListener('resize', onWindowResize, false)
+
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setClearColor( 0x000000, 0 ); // the default
+
+    // add the automatically created <canvas> element to the page
+    container.append(renderer.domElement);
+    renderer.domElement.classList.add("modelCanvas");
+
+    animate()
+}
+
+function removeModel(){
+    while(scene.children.length > 0){ 
+        scene.remove(scene.children[0]); 
+    }
+
+    buildingImg = document.createElement("img");
+    img.src = "/images/Ilojo_Bar.png";
+    img.classList.add("ilogoBar_img");
+    container.append(renderer.domElement);
+    renderer.domElement.classList.add(img);
+}
+
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
@@ -113,12 +150,3 @@ function render() {
     controls.maxPolarAngle = Math.PI/2;
     controls.enableZoom = false;
 }
-
-renderer.setSize(window.innerWidth, window.innerHeight)
-renderer.setClearColor( 0x000000, 0 ); // the default
-
-// add the automatically created <canvas> element to the page
-container.append(renderer.domElement);
-renderer.domElement.classList.add("modelCanvas");
-
-animate()
