@@ -199,6 +199,19 @@ margin-bottom: -190px;
     transform: translateX(-50%);
 }
 
+.buttonHolder{
+    display: flex;
+    justify-content: space-between;
+}
+
+.back{
+    margin-right: auto;
+}
+
+.next{
+    margin-left: auto;
+}
+
 
 
 
