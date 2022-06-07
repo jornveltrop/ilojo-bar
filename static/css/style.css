@@ -212,8 +212,28 @@ margin-bottom: -190px;
     margin-left: auto;
 }
 
+.backBtn{
+    background-color: transparent;
+    border: none;
+    width: 3.5em;
+    height: 3.5em;
+    top: 0;
+    position: absolute;
+    /* padding: 0.8em 1em; */
+    margin-top: 0.5em;
+    margin-left: 0.8em;
+    opacity: 0.5;
+    transition: 0.3s linear;
+}
 
+.backBtn img{
+    width: 100%;
+    height: 100%;
+}
 
+.backBtn:hover{
+    opacity: 1;
+}
 
 
 

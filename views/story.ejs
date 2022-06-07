@@ -1,5 +1,11 @@
 <%- include('./partials/header.ejs') %>
 
+<button type="button" class="backBtn">
+    <a href="/discover">
+        <img src="/images/arrow.png">
+    </a>
+</button>
+
 <main class="story">
     <%- ctx.prismicH.asHTML(storyData.title) %>
     <%- ctx.prismicH.asHTML(storyData.content) %>
