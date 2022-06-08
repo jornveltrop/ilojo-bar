@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 let tl = gsap.timeline();
 
-tl.from("header img", {translateY: "-210%", rotation: "-10", duration: 2.5, ease: "elastic", delay: 1})
+tl.from("header img", {translateY: "-210%", rotation: "-10", duration: 2.5, ease: "elastic", delay: .5})
 
 
 
