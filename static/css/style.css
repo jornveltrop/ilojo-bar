@@ -26,11 +26,33 @@ body {
     background-color: var(--light);
     font-family: 'Austral Sans', sans-serif;
 
-    /* background: url(/images/BG_red.jpg) no-repeat; */
+    background: url(/images/BG_red.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
 
     color: var(--light);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    height: 5.5em;
+    margin-top: 3em;
+    filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 0.4));
+    transform-origin: top right;
+}
+
+section {
+    background: url(/images/BG_red.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .img_cont {
@@ -44,12 +66,16 @@ body {
     height: 100%;
 }
 
-img {
+.img_cont img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     position: absolute;
+}
+
+#overlay {
+    transform-origin: 80% 50%;
 }
 
 .space {
