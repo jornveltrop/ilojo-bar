@@ -1,3 +1,4 @@
+
 :root {
     --dark: #101010;
     --light: #F3F3F3;
@@ -25,280 +26,34 @@ body {
     background-color: var(--light);
     font-family: 'Austral Sans', sans-serif;
 
-    overflow-x: hidden;
-
-    background: url(/images/BG_red.jpg) no-repeat;
+    /* background: url(/images/BG_red.jpg) no-repeat; */
     background-position: center center;
     background-size: cover;
 
     color: var(--light);
 }
 
-
-
-h1,
-h3 {
-    text-align: center;
-}
-
-h1 {
-    font-size: 4em;
-}
-
-h2 {
-    margin-top: .7em;
-    font-size: 1.1em;
-}
-
-.story h1 {
-    font-size: 2.3em;
-}
-
-h3 {
-    font-size: 2em;
-}
-
-header {
-    color: var(--light);
-    padding: .8em 1em;
-    display: flex;
-    justify-content: center;
-}
-
-.headerLogo {
-    width: 130px;
-}
-
-main {
-    padding: .8em 1em;
-    width: 100%;
-}
-
-.home {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: var(--light);
-
-    text-align: center;
-    margin: 3em 0;
-}
-
-.home .IlojoBar_con {
-    width: 100%;
-    max-width: 800px;
-    margin-top: 1em;
-}
-
-
-.home .ilogoBar_img {
-    width: 100%;
-}
-
-.home .logo {
-    width: 200px;
-}
-
-.discover {
-    display: flex;
-    justify-content: center;
-}
-
-ol {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-ol {
-	display: flex;
-	overflow-x: scroll;
-	scroll-snap-type: x mandatory;
-	width: var(--slider-size);
-}
-
-/* Hide Scrollbar itself */
-ol {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-ol::-webkit-scrollbar {
-  display: none;
-}
-
-li {
-	scroll-snap-align: center;
-	flex: 0 0 var(--slider-size);
-	width: var(--slider-size);
-	display: flex;
-    color: var(--light);
-}
-
-.liWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-	min-height: 800px;
+.img_cont {
+    height: 100vh;
+    width: 100vw;
     position: relative;
-    z-index: 2;
-    padding: 16em 6em 16em 6em;
 }
 
-.liWrapper h3 {
-    font-size: 1.2em;
-}
-
-
-a {
-    text-decoration: none;
-    color: var(--light);
-    border-radius: .2em;
-    text-transform: uppercase;
-    font-size: .9em;
-}
-
-btn { 
-    border: 2px solid var(--light);
-    padding: 1em 1.2em;
-}
-
-.backCon {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
-
-li img {
-    width: 100%;
-}
-
-p {
-    margin: 1em 0;
-}
-
-.modelCanvas {
-
-margin-top: -150px;
-
-margin-bottom: -190px;
-}
-
-#scene-container {
-
-}
-
-#buttonHomePage {
-    margin: 0 auto;
-    display: block;
-    top: 80%;
-    position: absolute;
-    width: 10em;
-    height: 3em;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.buttonHolder{
-    display: flex;
-    justify-content: space-between;
-}
-
-.back{
-    margin-right: auto;
-}
-
-.next{
-    margin-left: auto;
-}
-
-.backBtn{
-    background-color: transparent;
-    border: none;
-    width: 3.5em;
-    height: 3.5em;
-    top: 0;
-    position: absolute;
-    /* padding: 0.8em 1em; */
-    margin-top: 0.5em;
-    margin-left: 0.8em;
-    opacity: 0.5;
-    transition: 0.3s linear;
-}
-
-.backBtn img{
-    width: 100%;
+.scroll_cont {
+    transform-origin: 95% 50%;
     height: 100%;
 }
 
-.backBtn:hover{
-    opacity: 1;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
 }
 
-
-
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--grey);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: var(--red);
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px (--red);
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-
-  .hidden{
-    position: absolute;
-    left: -9999px;
-  }
+.space {
+    height: 400vh;
+    width: 100%;
+    background: blue;
+}
