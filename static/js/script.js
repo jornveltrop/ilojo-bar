@@ -12,7 +12,8 @@ let scrollTL = gsap.timeline({
       start: 'top top',
       end: 'bottom top',
       scrub: 2,
-      pin: true
+      pin: true,
+      snap: 5
     }
 });
 
