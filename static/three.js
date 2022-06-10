@@ -62,6 +62,7 @@ function seeModel(){
             })
             object.scale.set(.02, .02, .02)
             buildingObj = object;
+            controls.enablePan = false;
             scene.add(object)
         },
         (xhr) => {
