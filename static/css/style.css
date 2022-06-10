@@ -218,6 +218,7 @@ p {
     width: 3.5em;
     height: 3.5em;
     top: 0;
+    left: 0;
     position: absolute;
     /* padding: 0.8em 1em; */
     margin-top: 0.5em;
