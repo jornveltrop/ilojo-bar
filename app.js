@@ -37,6 +37,10 @@ app.get('/', async (req, res) => {
     res.render('home', { title, subtitle })
 });
 
+app.get('/3D_model', async (req, res) => {
+    res.render('3D_model', {})
+});
+
 //Routing
 app.get('/discover', async (req, res) => {
     let stories = await client.getAllByType('story', {
