@@ -33,7 +33,11 @@ body {
 }
 
 body {
-    overscroll-behavior-y: none;
+    overscroll-behavior: none;
+}
+
+main {
+    overflow-y: hidden;
 }
 
 header {
