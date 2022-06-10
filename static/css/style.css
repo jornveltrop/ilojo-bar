@@ -302,3 +302,25 @@ margin-bottom: -190px;
     position: absolute;
     left: -9999px;
   }
+
+
+
+
+/* LOADING BAR */
+#progress {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--grey);
+    border-radius: 15px;
+    margin-top: 150px;
+  }
+  
+  #loadingBar {
+    width: 0%;
+    height: 30px;
+    background-color: var(--dark);
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 15px;
+  }
