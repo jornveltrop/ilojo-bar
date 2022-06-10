@@ -8,23 +8,8 @@ let scene, fbxLoader, hemiLight, spotLight, renderer,
 
 var checkbox = document.querySelector("input[name=checkbox]");
 buildingImg = document.getElementById("IlojaBarImg");
-if(checkbox){
-    checkbox.addEventListener('change', function() {
-        if (this.checked) {
-            if(!model) { seeModel(); }
-            buildingImg.classList.add("hidden");
-            if(model) {model.classList.remove("hidden") }
-        } else {
-            buildingImg.classList.remove("hidden");
-            model.classList.add("hidden")
-        }
-      });
-}
-else{
-    if(!model) { seeModel(); }
-    buildingImg.classList.add("hidden");
-    if(model) {model.classList.remove("hidden") }
-}
+
+seeModel();
 
 
 function seeModel(){
