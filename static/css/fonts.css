@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Austral Sans';
+    src: url('/fonts/AustralSansStamp-Thin.woff2') format('woff2'),
+        url('/fonts/AustralSansStamp-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Austral Sans';
+    src: url('/fonts/AustralSansStamp-Regular.woff2') format('woff2'),
+        url('/fonts/AustralSansStamp-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Austral Sans';
+    src: url('/fonts/AustralSansStamp-Light.woff2') format('woff2'),
+        url('/fonts/AustralSansStamp-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Black Ground';
+    src: url('/fonts/Black-Ground.woff2') format('woff2'),
+        url('/fonts/Black-Ground.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
