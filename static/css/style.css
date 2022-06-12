@@ -336,9 +336,9 @@ button {
     }
 
     li .window_wrap {
-        height: 80%;
+        height: 70%;
         width: 100%;
-        margin-bottom: 1em;
+        margin: 2.3em 0 1em 0;
         position: relative;
         display: flex;
         justify-content: center;
