@@ -511,6 +511,15 @@ button {
         */
     }
 
+/* ROCKS*/
+.rockImg {
+    max-width: 200px;
+    transform: rotate(90deg) scale(0.5);
+    float: right;
+}
+
+
+
 /* 3D MODEL PAGE */
     main.model {
         display: flex;
