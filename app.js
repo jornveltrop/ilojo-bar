@@ -71,6 +71,7 @@ app.get('/discover/:id', async (req, res) => {
     let uid = req.params.id
     let story = await client.getByUID('story', uid)
     let storyData = story.data
+    let alineas = storyData.body[0].items
     let id = storyData.id - 1;
 
     let previous = getPreviousStory(id, stories);
@@ -78,6 +79,7 @@ app.get('/discover/:id', async (req, res) => {
 
     res.render('story', { 
         storyData,
+        alineas,
         previous,
         next
     })
