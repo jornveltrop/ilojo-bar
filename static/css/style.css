@@ -430,6 +430,85 @@ button {
 
 
 
+/* LOADING BAR */
+#progress {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--grey);
+    border-radius: 15px;
+    margin-top: 150px;
+  }
+  
+  #loadingBar {
+    width: 0%;
+    height: 30px;
+    background-color: var(--dark);
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 15px;
+  }
+
+
+
+/* WRECKING BALL */
+.wrecker {
+    display: block;
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    margin-left: -150px;
+    transform: rotate(30deg);
+}
+
+.wrecker:before {
+    content: " ";
+    background-color: white;
+    width: 50px;
+    height: 35px;
+    display: block;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    opacity: 0.5;
+    top: 50px;
+    left: 75px;
+    position: absolute;
+}
+
+.wrecker:after {
+    content: " ";
+    background-color: black;
+    width: 5px;
+    height: 700px;
+    display: block;
+    top: -677px;
+    left: 50%;
+    position: absolute;
+}
+
+@keyframes wreckit {
+    0% {
+        margin-left: -150px;
+        shape-outside: circle(150px at 0px 150px);
+        transform: rotate(30deg);
+    }
+
+    100% {
+        margin-left: 150px;
+        shape-outside: circle(150px at 1150px 150px);
+        transform: rotate(-30deg);
+    }
+    /*
+    100% {
+        margin-left: -150px;
+        shape-outside: circle(150px at 0px 150px);
+        transform: rotate(30deg);
+    }
+    */
+}
 
 
 
