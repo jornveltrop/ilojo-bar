@@ -657,6 +657,12 @@ main.model {
     transform-origin: bottom left;
 }
 
+.dropdown-content li ul{
+    position: absolute;
+    margin-left: 106px;
+    margin-top: -45px;
+}
+
 .dropdown-content li ul a{
     display: none;
 }
