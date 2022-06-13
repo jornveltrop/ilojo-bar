@@ -7,17 +7,11 @@ let scene, fbxLoader, hemiLight, spotLight, renderer,
     model;
 
 var checkbox = document.querySelector("input[name=checkbox]");
+var loadingBar = document.getElementById("loadingBar");
+var progressBar = document.getElementById("progress");
 buildingImg = document.getElementById("IlojaBarImg");
-checkbox.addEventListener('change', function() {
-    if (this.checked) {
-        if(!model) { seeModel(); }
-        buildingImg.classList.add("hidden");
-        if(model) {model.classList.remove("hidden") }
-    } else {
-        buildingImg.classList.remove("hidden");
-        model.classList.add("hidden")
-    }
-  });
+
+seeModel();
 
 
 function seeModel(){
@@ -55,10 +49,17 @@ function seeModel(){
             })
             object.scale.set(.02, .02, .02)
             buildingObj = object;
+            controls.enablePan = false;
             scene.add(object)
+            progressBar.style.display = "none";
         },
         (xhr) => {
-            console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+            let percentage = (xhr.loaded / xhr.total) * 100;
+            console.log(percentage + '% loaded')
+            var roundedPerc = Math.round(percentage * 10) / 10;
+
+            loadingBar.style.width = roundedPerc + "%";
+            loadingBar.innerHTML = roundedPerc  + "%";
         },
         (error) => {
             console.log(error)

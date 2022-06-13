@@ -6,6 +6,7 @@ if (homepage) {
   
   let tl = gsap.timeline();
 
+
   tl.from("header img", {translateY: "-210%", rotation: "-10", duration: 2.5, ease: "elastic", delay: .5})
     .to(".mask_span", { y: "0%", duration: 0.7, stagger: 0.2 }, "<15%")
     .from(".scroll_btn", {translateY: "300px", ease: Power1.easeOut}, "<")
@@ -38,5 +39,17 @@ if (homepage) {
     let scrollValue = scrollTL.scrollTrigger.labelToScroll('end')
     gsap.to(window, {scrollTo: scrollValue, duration: 2.2});
   });
+}
 
+init();
+
+function init() {
+  const goBackLink = document.querySelector(".goBack")
+  if(goBackLink){
+      const historyGoBack = () => {
+          window.history.back()
+          goBackLink.removeEventListener("click", historyGoBack)
+      }
+      goBackLink.addEventListener("click", historyGoBack)
+  }
 }
