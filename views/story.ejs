@@ -1,23 +1,42 @@
 <%- include('./partials/header.ejs') %>
 
 <main class="story">
-    <div class="wrecker"></div> 
-    <%- ctx.prismicH.asHTML(storyData.title) %>
-    <%- ctx.prismicH.asHTML(storyData.content) %>
+    
 
-    <div class="buttonHolder" >
+    <article>
+        <!-- <div class="wrecker"></div>  -->
 
-        <% if(previous){ %>
-            <btn class="button back" type="button">
-                <a href= <%-previous.url%>>Previous</a>
-            </btn>
-        <% } %>
-        <% if(next){ %>
-            <btn class="button next" type="button">
-                <a href= <%-next.url%>>Next</a>
-            </btn>
-        <% } %>
-    </div>
+        <%- ctx.prismicH.asHTML(storyData.title) %>
+        
+        <% console.log(alineas[0]) %>
+        <% alineas.forEach(alinea => { %>
+            <section id="<%= alinea.alinea_id %>">
+                <% if(alinea.image.url){ %>
+                    <div class="alinea_image">
+                        <img src="<%= alinea.image.url %>">
+                    </div>
+                <% } %>
+                
+                <div>
+                    <%- ctx.prismicH.asHTML(alinea.subtitle) %>
+                    <%- ctx.prismicH.asHTML(alinea.alinea) %>
+                </div>
+            </section>
+       <% }); %>
+
+       <div class="next_prev_cont" >
+            <% if(previous){ %>
+                <button class="back">
+                    <a href= <%-previous.url%> class="btn_a"> < Previous</a>
+                </button>
+            <% } %>
+            <% if(next){ %>
+                <button class="next">
+                    <a href= <%-next.url%> class="btn_a">Next ></a>
+                </button>
+            <% } %>
+        </div>
+    </article>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>

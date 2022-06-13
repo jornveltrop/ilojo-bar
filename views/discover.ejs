@@ -4,13 +4,16 @@
     <ol>
         <% discoverList.forEach(story => { %>
             <li> 
-                <div class="liWrapper">
-                    <div class="backCon">
-                        <img src="/images/window.png" />
-                    </div>
-                    <h3><%- story.title %></h3>
-                    
-                    <a href="<%- story.url %>">Discover</a>
+                <h3><%- story.title %></h3>
+                <div class="window_wrap">
+                    <img class="window door window_L" src="/images/window_L.png" />
+                    <img class="window door window_R" src="/images/window_R.png" />
+                    <img class="window window_bg" src="/images/window_bg.png" />
+                </div>
+                <div class="btn_wrap">
+                    <button class="">
+                        <a href="<%- story.url %>" class="btn_a">Discover</a>
+                    </button>
                 </div>
             </li>
        <% }); %>
