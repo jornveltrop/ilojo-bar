@@ -634,87 +634,9 @@ main.model {
     opacity: 1;
 }
 
-.menuDropdown {
-    position: relative;
-    display: block;
-    padding: 0;
-}
-
-.menuDropdown ul{
-    padding: 0;
-    list-style: none;
-}
-
-.menuDropdown:hover .dropdown-content {
-    display: block;
-}
-
 .homeAnchor {
     display: block;
 }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content{
-    display: none;
-    position: absolute;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 5;
-    list-style: none;
-}
-
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: block;
-    color: var(--red);
-    transition: transform .75s ease;
-    border: #8c0500 1px solid;
-    background: var(--light);
-}
-
-.dropdown-content a:hover {
-    transform: scale(1.04);
-}
-
-.dropdown-content a:after {
-    content: '';
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--red);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.dropdown-content a:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.dropdown-content li ul{
-    position: absolute;
-    margin-left: 106px;
-    margin-top: -45px;
-}
-
-.dropdown-content li ul a{
-    display: none;
-}
-
-.dropdown-content li ul li a{
-    padding: 6px 8px;
-}
-
-.dropdown-content li:hover>ul a{
-    display: block;
-    z-index: 1;
-}
-
-
-
 
 .switch {
     position: relative;
@@ -803,10 +725,54 @@ input:checked+.slider:before {
     border-radius: 15px;
 }
 
-    /*
-    100% {
-        margin-left: -150px;
-        shape-outside: circle(150px at 0px 150px);
-        transform: rotate(30deg);
-    }
-    */
+.sideMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: -20px;
+    background-color: var(--dark);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 0;
+    margin-left: 0px;
+  }
+
+  .sideMenu li{
+    list-style-type: none;
+  }
+  
+  .sideMenu a {
+    padding: 10px 10px 10px 0;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--light);
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sideMenu a:hover{
+    transform: scale(1.2);
+  }
+
+  .sideMenu h2 {
+    /* padding: 10px; */
+    color: var(--light);
+    transition: 0.3s;
+    line-height: 50px;
+    font-size: 2em;
+  }
+  
+  .sideMenu a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sideMenu .closebtn {
+    /* padding: 10px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 36px;
+    margin-left: 10px;
+  }
