@@ -116,6 +116,7 @@ button {
     padding: 1.2em 3em 1em 3em;
     color: var(--red);
     transition: transform .75s ease;
+    font-family: 'Black Ground', sans-serif;
 }
 
 .btn_a:hover {
@@ -124,6 +125,15 @@ button {
 
 .btn_breed {
     padding: 1.5em 2.2em 1.2em 2.2em;
+}
+
+.btn_square {
+    background-image: url('/images/button_bg_light_square.svg');
+    padding: 1.6em;
+}
+
+.btn_square.btn_a:after {
+    height: 2px;
 }
 
 .btn_a:after {
@@ -240,36 +250,32 @@ main.home {
     z-index: 0;
 }
 
-.see_model{
-    display: flex;
-    align-items: center;
+.see_model_cont {
     position: fixed;
-    top: 0.5em;
-    margin-left: -50px;
-    margin-right: -50px;
-    width: 100%;
+    top: calc(50vh - 48px);
+    right: -.6em;
+    z-index: 2;
+}
+
+.see_model_cont a {
     display: flex;
-    align-items: center;
     flex-direction: column;
-
-    opacity: 0;
-    z-index: 0;
+    gap: .5em;
 }
 
-.see_model button a{
-    background: url('/images/button_bg_light.svg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    padding: .5em;
-    padding: 0.6em 1.5em 0.5em 1.5em;
-    color: var(--red);
-    transition: transform .75s ease;
+.see_model_cont img {
+    height: 3em;
 }
 
+.see_model_cont p {
+    margin: 0;
+}
+
+.see_model_cont .btn_a {
+    font-size: .75em;
+    font-family: 'Austral Sans', sans-serif;
+    text-transform: none;
+}
 
 /* Footer */
 footer.home {
