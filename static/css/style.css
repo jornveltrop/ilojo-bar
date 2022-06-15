@@ -463,6 +463,7 @@ button {
         position: relative;
         margin-left: -150px;
         transform: rotate(30deg);
+        z-index: -1;
     }
 
     .wrecker:before {
