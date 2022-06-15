@@ -47,38 +47,25 @@ if (homepage) {
 
 // DISCOVER PAGE CODE
 if (discover) {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-  gsap.defaults({overwrite: "auto"});
-  
-
-  let scrollTL = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.img_cont',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1,
-        pin: true,
-        snap: 4
+  const inViewObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // do stuff when in view
+        entry.target.classList.add('in-view')
+        console.log('hi')
+      } else {
+        // do stuff when not in view
+        entry.target.classList.remove('in-view')
+        console.log('top')
       }
-  });
-
-  scrollTL.to('.scroll_btn', {opacity: 0, duration: .3} )
-          .to('.scroll_cont', {scale: 1.6},"<")
-          .fromTo('#color_building', {opacity: 0}, {opacity: 1},"<")
-          .to('#background', {opacity: 0},"-=50%")
-          .to('#overlay', {opacity: 0, scale: 1.05}, "<25%")
-          .fromTo('.discover_cont',{opacity: 0, zIndex: 0, scale: 0.9, rotation:-3}, {opacity: 1, zIndex: 2, scale: 1, rotation:0}, "<")
-          .from('.see_model_cont',{ translateX: "100%", opacity: "0"}, "<")
-          .addLabel('end')
-         
-
-
-  let btn = document.querySelector('footer button')
-
-  btn.addEventListener("click", () => {
-    let scrollValue = scrollTL.scrollTrigger.labelToScroll('end')
-    gsap.to(window, {scrollTo: scrollValue, duration: 2.2});
-  });
+    })
+  }, { threshold: .5 })
+  
+  const elements = document.querySelectorAll('.discover li')
+  
+  elements.forEach(element => {
+    inViewObserver.observe(element)
+  })
 }
 
 function init() {

@@ -870,3 +870,14 @@ input:checked+.slider:before {
     }
     */
 }
+
+
+@media only screen and (max-width: 1220px) {
+    .in-view .window_L {
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);
+    }
+
+    .in-view .window_R {
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
+    }
+  }
