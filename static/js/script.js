@@ -10,7 +10,7 @@ if (homepage) {
   tl.from("header img", {translateY: "-210%", rotation: "-10", duration: 2.5, ease: "elastic", delay: .5})
     .to(".mask_span", { y: "0%", duration: 0.7, stagger: 0.2 }, "<15%")
     .from(".scroll_btn", {translateY: "300px", ease: Power1.easeOut}, "<")
-
+    .from(".see_model", {translateY: "300px", ease: Power1.easeOut}, "<")
 
 
   let scrollTL = gsap.timeline({
@@ -30,6 +30,7 @@ if (homepage) {
           .to('#background', {opacity: 0},"-=50%")
           .to('#overlay', {opacity: 0, scale: 1.05}, "<25%")
           .fromTo('.discover_cont',{opacity: 0, zIndex: 0, scale: 0.9, rotation:-3}, {opacity: 1, zIndex: 2, scale: 1, rotation:0}, "<")
+          .fromTo('.see_model',{opacity: 0, zIndex: 0, scale: 0.9, rotation:-3}, {opacity: 1, zIndex: 2, scale: 1, rotation:0}, "<")
           .addLabel('end');
 
 

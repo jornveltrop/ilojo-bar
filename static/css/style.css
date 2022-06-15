@@ -240,6 +240,36 @@ main.home {
     z-index: 0;
 }
 
+.see_model{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0.5em;
+    margin-left: -50px;
+    margin-right: -50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    opacity: 0;
+    z-index: 0;
+}
+
+.see_model button a{
+    background: url('/images/button_bg_light.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: .5em;
+    padding: 0.6em 1.5em 0.5em 1.5em;
+    color: var(--red);
+    transition: transform .75s ease;
+}
+
 
 /* Footer */
 footer.home {
@@ -342,7 +372,9 @@ main.discover {
 .discover li {
     scroll-snap-align: center;
     height: 100%;
-    width: 370px;
+    min-width: 20rem;
+    width: 33vw;
+    max-width: 24rem;
     flex: none;
     display: flex;
     color: var(--light);
@@ -354,7 +386,7 @@ main.discover {
 .discover li .window_wrap {
     height: 70%;
     width: 100%;
-    margin: 2.3em 0 1em 0;
+    margin: 1.5em 0 1em 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -520,6 +552,11 @@ main.model {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+}
+
+#scene-container{
+    margin-bottom: 100px;
 }
 
 .modelCanvas {
