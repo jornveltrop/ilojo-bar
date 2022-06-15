@@ -512,24 +512,6 @@ main.story {
         transform: rotate(-30deg);
     }
 }
-        /*
-    /*
->>>>>>> main
-        100% {
-            margin-left: -150px;
-            shape-outside: circle(150px at 0px 150px);
-            transform: rotate(30deg);
-        }
-        */
-
-
-/* ROCKS*/
-.rockImg {
-    max-width: 200px;
-    transform: rotate(90deg) scale(0.5);
-    float: right;
-}
-
 
 
 /* 3D MODEL PAGE */
