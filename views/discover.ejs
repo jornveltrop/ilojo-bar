@@ -1,7 +1,9 @@
 <%- include('./partials/header.ejs') %>
 
+<script defer src="/js/horizontalScroll.js"></script>
+
 <main class="discover"> 
-    <ol>
+    <ol class="storiesList">
         <% discoverList.forEach(story => { %>
             <li> 
                 <h3><%- story.title %></h3>

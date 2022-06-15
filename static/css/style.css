@@ -357,14 +357,20 @@ main.discover {
     list-style: none;
     display: flex;
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    /*scroll-snap-type: x mandatory;*/
     width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
     gap: 1.5em;
     padding: 0 1.5em;
+    transition: all 0.2s;
+    cursor:grab;
 }
 
+.discover ol:active {
+    cursor:grabbing;
+}
+     
 .discover ol::-webkit-scrollbar {
     display: none;
 }
