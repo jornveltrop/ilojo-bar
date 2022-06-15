@@ -25,3 +25,9 @@ slider.addEventListener('mousemove', (e) => {
   slider.scrollLeft = scrollLeft - walk;
   console.log(walk);
 });
+
+
+slider.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    slider.scrollLeft += evt.deltaY;
+});
