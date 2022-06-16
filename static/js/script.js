@@ -72,8 +72,8 @@ if (discover) {
 
 
   function mouseMoveFunc(evt) {
-    const maxX = gsap.getProperty(".discover .window_img_inner > img", "width") * 0.08;
-    const maxY = gsap.getProperty(".discover .window_img_inner > img", "height") * 0.08; 
+    const maxX = gsap.getProperty(".discover .window_img_inner > img", "width") * 0.03;
+    const maxY = gsap.getProperty(".discover .window_img_inner > img", "height") * 0.03; 
     const percentX = gsap.utils.normalize(0, innerWidth, evt.pageX);
     const percentY = gsap.utils.normalize(0, innerHeight, evt.pageY);
     
