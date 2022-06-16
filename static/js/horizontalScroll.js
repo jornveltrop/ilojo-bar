@@ -1,9 +1,10 @@
-function setScrolling() {
-  const slider = document.querySelector('.storiesList');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+const slider = document.querySelector('.storiesList');
+let isDown = false;
+let startX;
+let scrollLeft;
+let settingsSetted = false;
 
+function setScrolling() {
   slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
@@ -34,11 +35,6 @@ function setScrolling() {
 }
 
 function removeScrolling() {
-  const slider = document.querySelector('.storiesList');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
   slider.removeEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
@@ -70,17 +66,26 @@ function removeScrolling() {
 
 setScrolling()
 
+function checkScreen() {
+  let windowWidth = window.innerWidth;
+  console.log(windowWidth)
 
+  if(windowWidth > 756) {
+    if(slider.classList.contains("isMobile"))
+      slider.classList.remove("isMobile");
+  } else {
+      slider.className = "isMobile";
+  }
+}
 
-// function checkScreen() {
-//   let windowWidth = window.innerWidth;
-//   console.log(windowWidth)
+function changeScrollSettings(){
+  if(slider.classList.contains("isMobile") && !settingsSetted){
+    setScrolling()
+    settingsSetted = true;
+  }
+  else if(!slider.classList.contains("isMobile")){
+    settingsSetted = false;
+  }
+}
 
-//   if(windowWidth > 756) {
-//     setScrolling()
-//   } else {
-//     removeScrolling()
-//   }
-// }
-
-// window.onresize = checkScreen;
+ window.onresize = checkScreen;
