@@ -21,20 +21,16 @@
                     <% if(alinea.alinea_id == "wreckingBall"){ %>
                         <div class="wrecker"></div>
                     <% } %>
-                </div>
+                    </div>
             </section>
        <% }); %>
 
        <div class="next_prev_cont" >
             <% if(previous){ %>
-                <button class="back">
-                    <a href= <%-previous.url%> class="btn_a"> < Previous</a>
-                </button>
+                <a href= <%-previous.url%> class="btn_a back">< Previous</a>
             <% } %>
             <% if(next){ %>
-                <button class="next">
-                    <a href= <%-next.url%> class="btn_a">Next ></a>
-                </button>
+                <a href= <%-next.url%> class="btn_a next">Next ></a>
             <% } %>
         </div>
     </article>

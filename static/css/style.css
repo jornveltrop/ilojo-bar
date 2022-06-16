@@ -34,8 +34,7 @@ body {
 }
 
 
-h1,
-h3 {
+h1, h2, h3 {
     text-align: center;
 }
 
@@ -44,20 +43,15 @@ h1 {
 }
 
 h2 {
-    margin-top: .7em;
-    font-size: 1.1em;
-}
-
-.story h1 {
     font-size: 2.3em;
-    text-align: start;
+    text-align: center;
 }
 
 h3 {
     font-size: 2em;
 }
 
-header {
+body > header {
     color: var(--light);
     padding: .8em 1em;
     display: flex;
@@ -89,14 +83,6 @@ a {
     color: var(--light);
 }
 
-button {
-    appearance: none;
-    background: transparent;
-    border: none;
-    font-family: 'Black Ground', sans-serif;
-    cursor: pointer;
-}
-
 .red {
     color: var(--red);
 }
@@ -108,7 +94,7 @@ button {
     background-repeat: no-repeat;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.3em;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -176,14 +162,14 @@ header.home {
     padding: 0;
 }
 
-header.home h2 {
+header.home p {
     margin: 1.4em 1em;
     font-size: 1.4em;
     text-shadow: 0 0 5px rgb(0 0 0 / 0.4);
     text-align: center;
 }
 
-header.home h2>span {
+header.home p > span {
     display: inline-block;
     overflow: hidden;
     padding: 5px 5px;
@@ -345,10 +331,17 @@ footer.home {
 
 main.discover {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     height: calc(100vh - calc(1.6em + 50px));
     padding: 0;
     cursor: pointer;
+}
+
+.discover header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .discover h3 {
@@ -365,12 +358,13 @@ main.discover {
     overflow-x: scroll;
     /*scroll-snap-type: x mandatory;*/
     width: 100%;
+    height: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
     gap: 1.5em;
     padding: 0 1.5em;
     transition: all 0.2s;
-    cursor:grab;
+    cursor: grab;
 }
 
 .discover ol:active {
@@ -403,7 +397,7 @@ main.discover {
 .discover li .window_wrap {
     height: 70%;
     width: 100%;
-    margin: 1.5em 0 1em 0;
+    margin: 0em 0 1em 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -441,11 +435,6 @@ li:hover .window_R {
     transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
 }
 
-.btn_wrap {
-    position: absolute;
-    bottom: 3em;
-    z-index: 3;
-}
 
 
 /* STORY PAGE */
@@ -715,37 +704,6 @@ input:checked+.slider:before {
 }
 
 
-
-
-/* LOADING BAR */
-#progress {
-    width: 100%;
-    max-width: 400px;
-    background-color: var(--grey);
-    border-radius: 15px;
-    margin-top: 150px;
-}
-
-#loadingBar {
-    width: 0%;
-    height: 30px;
-    background-color: var(--dark);
-    text-align: center;
-    line-height: 30px;
-    color: white;
-    border-radius: 15px;
-}
-
-@media only screen and (max-width: 1220px) {
-    .in-view .window_L {
-        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);
-    }
-
-    .in-view .window_R {
-        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
-    }
-}
-
 .sideMenu {
     height: 100%;
     width: 0;
@@ -795,3 +753,45 @@ input:checked+.slider:before {
     left: 0;
     font-size: 4em;
   }
+
+
+
+/* LOADING BAR */
+#progress {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--grey);
+    border-radius: 15px;
+    margin-top: 150px;
+}
+
+#loadingBar {
+    width: 0%;
+    height: 30px;
+    background-color: var(--dark);
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 15px;
+}
+
+
+@media only screen and (max-width: 1220px) {
+    .in-view .window_L {
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);
+    }
+
+    .in-view .window_R {
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
+    }
+}
+
+
+@media only screen and (max-width: 756px) {
+    .discover ol {
+        scroll-snap-type: x mandatory;
+    }
+}
+
+
+
