@@ -70,6 +70,7 @@ Legacy also wants to reach out the Lagosians abroad. At last some people can vis
 It falls under Legacy. Legacy keeps busy with other heritages in Nigeria. Sadly we don't have any examples. 
 
 ### Problem Definition <a name="ProblemDefinition">
+The problem Legacy is struggling with, is the remambrance of Iloja bar. It has been illegally demolished and no sign anymore of it existing. They want to have a visualisation of the building and a display of all the stories from Iloja bar. They want to make this in a site, where it will run mostly on mobile. Another problem is performance. Most of the people in Nigeria have old phones and the internet is unreliable. 
  
 ### Solution <a name="Solution">
  
