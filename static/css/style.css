@@ -34,8 +34,7 @@ body {
 }
 
 
-h1,
-h3 {
+h1, h2, h3 {
     text-align: center;
 }
 
@@ -44,20 +43,15 @@ h1 {
 }
 
 h2 {
-    margin-top: .7em;
-    font-size: 1.1em;
-}
-
-.story h1 {
     font-size: 2.3em;
-    text-align: start;
+    text-align: center;
 }
 
 h3 {
     font-size: 2em;
 }
 
-header {
+body > header {
     color: var(--light);
     padding: .8em 1em;
     display: flex;
@@ -100,7 +94,7 @@ a {
     background-repeat: no-repeat;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.3em;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -168,14 +162,14 @@ header.home {
     padding: 0;
 }
 
-header.home h2 {
+header.home p {
     margin: 1.4em 1em;
     font-size: 1.4em;
     text-shadow: 0 0 5px rgb(0 0 0 / 0.4);
     text-align: center;
 }
 
-header.home h2>span {
+header.home p > span {
     display: inline-block;
     overflow: hidden;
     padding: 5px 5px;
@@ -338,10 +332,16 @@ footer.home {
 main.discover {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     height: calc(100vh - calc(1.6em + 50px));
     padding: 0;
     cursor: pointer;
+}
+
+.discover header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .discover h3 {
@@ -803,14 +803,6 @@ input:checked+.slider:before {
     border-radius: 15px;
 }
 
-    /*
-    100% {
-        margin-left: -150px;
-        shape-outside: circle(150px at 0px 150px);
-        transform: rotate(30deg);
-    }
-    */
-
 
 @media only screen and (max-width: 1220px) {
     .in-view .window_L {
@@ -819,5 +811,11 @@ input:checked+.slider:before {
 
     .in-view .window_R {
         transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
+    }
+}
+
+@media only screen and (max-width: 756px) {
+    .discover ol {
+        scroll-snap-type: x mandatory;
     }
 }

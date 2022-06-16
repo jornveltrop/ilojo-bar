@@ -7,7 +7,10 @@
 <script defer src="/js/horizontalScroll.js"></script>
 
 <main class="discover"> 
-    <h2>Discover stories</h2>
+    <header>
+        <h2>Discover stories</h2>
+    </header>
+    
     <ol class="storiesList">
         <% discoverList.forEach(story => { %>
             <li> 
@@ -17,9 +20,7 @@
                     <img class="window window_bg" src="/images/window_bg.png" />
                 </div>
                 <h3><%- story.title %></h3>
-                <div class="">
-                    <a href="<%- story.url %>" class="btn_a">Discover</a>
-                </div>
+                <a href="<%- story.url %>" aria-label="<%- story.title %>" class="btn_a">Discover</a>
             </li>
        <% }); %>
     </ol>
