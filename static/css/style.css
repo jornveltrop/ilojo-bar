@@ -389,6 +389,11 @@ main.discover {
     position: relative;
 }
 
+.no_snap {
+    scroll-snap-align: none;
+    scroll-snap-type: none;
+}
+
 .discover li .window_wrap {
     height: 70%;
     width: 100%;
