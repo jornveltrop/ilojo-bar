@@ -66,6 +66,26 @@ if (discover) {
   elements.forEach(element => {
     inViewObserver.observe(element)
   })
+
+
+  
+
+
+  function mouseMoveFunc(evt) {
+    const maxX = gsap.getProperty(".discover .window_img_inner > img", "width") * 0.08;
+    const maxY = gsap.getProperty(".discover .window_img_inner > img", "height") * 0.08; 
+    const percentX = gsap.utils.normalize(0, innerWidth, evt.pageX);
+    const percentY = gsap.utils.normalize(0, innerHeight, evt.pageY);
+    
+    gsap.to(".discover .window_img_inner > img", {
+      duration: 0.2,
+      x: percentX * maxX - maxX / 2,
+      y: percentY * maxY - maxY / 2,
+      overwrite: true
+    });
+  }
+
+  window.addEventListener("mousemove", mouseMoveFunc);
 }
 
 function init() {
