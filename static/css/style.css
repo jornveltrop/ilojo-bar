@@ -731,7 +731,7 @@ input:checked+.slider:before {
     position: fixed;
     z-index: 10;
     top: 0;
-    right: -20px;
+    right: 0px;
     background-color: var(--dark);
     overflow-x: hidden;
     transition: 0.5s;
@@ -753,15 +753,14 @@ input:checked+.slider:before {
   }
 
   .sideMenu a:hover{
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 
   .sideMenu h2 {
     /* padding: 10px; */
     color: var(--light);
     transition: 0.3s;
-    line-height: 50px;
-    font-size: 2em;
+    font-size: 1.3em;
   }
   
   .sideMenu a:hover {
