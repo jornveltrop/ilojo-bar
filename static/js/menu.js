@@ -12,7 +12,7 @@ closeMenuBtn.addEventListener("click", () => {
 
 function openNav() {
     sideMenu.style.width = "250px";
-    sideMenu.style.padding = "60px 0px 0px 60px";
+    sideMenu.style.padding = "50px 0px 0px 0px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
   
