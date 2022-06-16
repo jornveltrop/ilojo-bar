@@ -4,11 +4,8 @@
     
 
     <article>
-        <!-- <div class="wrecker"></div>  -->
-
         <%- ctx.prismicH.asHTML(storyData.title) %>
-        
-        <% console.log(alineas[0]) %>
+
         <% alineas.forEach(alinea => { %>
             <section id="<%= alinea.alinea_id %>">
                 <% if(alinea.image.url){ %>
@@ -20,6 +17,10 @@
                 <div>
                     <%- ctx.prismicH.asHTML(alinea.subtitle) %>
                     <%- ctx.prismicH.asHTML(alinea.alinea) %>
+
+                    <% if(alinea.alinea_id == "wreckingBall"){ %>
+                        <div class="wrecker"></div>
+                    <% } %>
                 </div>
             </section>
        <% }); %>

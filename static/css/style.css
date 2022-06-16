@@ -363,14 +363,20 @@ main.discover {
     list-style: none;
     display: flex;
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    /*scroll-snap-type: x mandatory;*/
     width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
     gap: 1.5em;
     padding: 0 1.5em;
+    transition: all 0.2s;
+    cursor:grab;
 }
 
+.discover ol:active {
+    cursor:grabbing;
+}
+     
 .discover ol::-webkit-scrollbar {
     display: none;
 }
@@ -514,6 +520,7 @@ main.story {
     position: relative;
     margin-left: -150px;
     transform: rotate(30deg);
+    z-index: -1;
 }
 
 .wrecker:before {
@@ -534,9 +541,9 @@ main.story {
     content: " ";
     background-color: black;
     width: 5px;
-    height: 700px;
+    height: 1141px;
     display: block;
-    top: -677px;
+    top: -1102px;
     left: 50%;
     position: absolute;
 }
@@ -553,15 +560,8 @@ main.story {
         shape-outside: circle(150px at 1150px 150px);
         transform: rotate(-30deg);
     }
-
-    /*
-        100% {
-            margin-left: -150px;
-            shape-outside: circle(150px at 0px 150px);
-            transform: rotate(30deg);
-        }
-        */
 }
+
 
 /* 3D MODEL PAGE */
 main.model {
@@ -814,59 +814,6 @@ input:checked+.slider:before {
     border-radius: 15px;
 }
 
-
-
-/* WRECKING BALL */
-.wrecker {
-    display: block;
-    width: 200px;
-    height: 200px;
-    float: left;
-    background-color: black;
-    border-radius: 50%;
-    position: relative;
-    margin-left: -150px;
-    transform: rotate(30deg);
-}
-
-.wrecker:before {
-    content: " ";
-    background-color: white;
-    width: 50px;
-    height: 35px;
-    display: block;
-    border-radius: 50%;
-    transform: rotate(-30deg);
-    opacity: 0.5;
-    top: 50px;
-    left: 75px;
-    position: absolute;
-}
-
-.wrecker:after {
-    content: " ";
-    background-color: black;
-    width: 5px;
-    height: 700px;
-    display: block;
-    top: -677px;
-    left: 50%;
-    position: absolute;
-}
-
-@keyframes wreckit {
-    0% {
-        margin-left: -150px;
-        shape-outside: circle(150px at 0px 150px);
-        transform: rotate(30deg);
-    }
-
-    100% {
-        margin-left: 150px;
-        shape-outside: circle(150px at 1150px 150px);
-        transform: rotate(-30deg);
-    }
-
     /*
     100% {
         margin-left: -150px;
@@ -874,7 +821,6 @@ input:checked+.slider:before {
         transform: rotate(30deg);
     }
     */
-}
 
 
 @media only screen and (max-width: 1220px) {
@@ -885,4 +831,4 @@ input:checked+.slider:before {
     .in-view .window_R {
         transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
     }
-  }
+}
