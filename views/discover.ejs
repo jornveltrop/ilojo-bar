@@ -7,19 +7,18 @@
 <script defer src="/js/horizontalScroll.js"></script>
 
 <main class="discover"> 
+    <h2>Discover stories</h2>
     <ol class="storiesList">
         <% discoverList.forEach(story => { %>
             <li> 
-                <h3><%- story.title %></h3>
                 <div class="window_wrap">
                     <img class="window door window_L" src="/images/window_L.png" />
                     <img class="window door window_R" src="/images/window_R.png" />
                     <img class="window window_bg" src="/images/window_bg.png" />
                 </div>
-                <div class="btn_wrap">
-                    <button class="">
-                        <a href="<%- story.url %>" class="btn_a">Discover</a>
-                    </button>
+                <h3><%- story.title %></h3>
+                <div class="">
+                    <a href="<%- story.url %>" class="btn_a">Discover</a>
                 </div>
             </li>
        <% }); %>
