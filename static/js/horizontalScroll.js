@@ -68,7 +68,6 @@ setScrolling()
 
 function checkScreen() {
   let windowWidth = window.innerWidth;
-  console.log(windowWidth)
 
   if(windowWidth > 756) {
     if(slider.classList.contains("isMobile"))

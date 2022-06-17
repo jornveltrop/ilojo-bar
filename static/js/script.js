@@ -52,11 +52,9 @@ if (discover) {
       if (entry.isIntersecting) {
         // do stuff when in view
         entry.target.classList.add('in-view')
-        console.log('hi')
       } else {
         // do stuff when not in view
         entry.target.classList.remove('in-view')
-        console.log('top')
       }
     })
   }, { threshold: .5 })
