@@ -53,6 +53,7 @@ app.get('/discover', async (req, res) => {
     let discoverList = stories.map(story => {
         return {
             "url": story.url, 
+            "collage_image": story.data.collage_image,
             "title": story.data.title[0].text
         }
     })
