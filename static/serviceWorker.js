@@ -3,6 +3,17 @@ const CORE_ASSETS = [
   '/js/script.js',
   '/css/style.css',
   '/css/fonts.css',
+  '/images/BG_red.jpg',
+  '/images/arrow.svg',
+  '/images//Logo_IlojoBar.svg',
+  '/images/menu.svg',
+  '/images/ilojo_bar_bw_1.jpg',
+  '/images/ilojo_bar_bw_2.png',
+  '/images/ilojo_bar_bw_3.png',
+  '/images/3d_building.png',
+  '/images/button_bg_light_square.svg', 
+  '/images/button_bg_light.svg',
+  '/js/menu.js',
   'offline'
 ];
 
