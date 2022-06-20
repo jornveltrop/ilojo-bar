@@ -21,7 +21,7 @@ if (homepage) {
         end: 'bottom top',
         scrub: 1,
         pin: true,
-        snap: 4
+        snap: 1
       }
   });
 
@@ -94,6 +94,16 @@ function init() {
           goBackLink.removeEventListener("click", historyGoBack)
       }
       goBackLink.addEventListener("click", historyGoBack)
+  }
+
+  //Register/update the service worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/serviceWorker.js')
+      .then(function(registration) {
+        return registration.update();
+      })
+    });
   }
 }
 

@@ -1,0 +1,13 @@
+
+{
+    "name": "Iloja bar",
+    "short_name": "Iloja bar",
+    "theme_color": "#4B5666",
+    "background_color": "#4B5666",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "/",
+    "icons": [
+
+    ]
+}
