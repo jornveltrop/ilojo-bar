@@ -1,3 +1,4 @@
+/*
 const CACHE_VERSION = 37;
 
 const CORE = 'core-cache';
