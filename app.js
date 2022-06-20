@@ -6,6 +6,7 @@ import { client } from './config/prismicConfig.js'
 import expressLayouts from 'express-ejs-layouts';
 import path from 'path';
 import {fileURLToPath} from 'url';
+import compression from 'compression'
 
 //Variabelen
 const app = express();
@@ -17,7 +18,8 @@ const __dirname = path.dirname(__filename);
 
 // Aangeven waar onze statishce files zich bevinden  
 app.use(express.static('static'));
-
+// compress all responses
+app.use(compression())
 
 // Templating engine
 app.use(expressLayouts)

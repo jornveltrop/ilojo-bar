@@ -1,4 +1,4 @@
-const CORE_CACHE_VERSION = 'v1' //Use different versions to see changes in html files or css
+const CORE_CACHE_VERSION = 'v2' //Use different versions to see changes in html files or css
 const CORE_ASSETS = [
   '/js/script.js',
   '/css/style.css',

@@ -21,7 +21,7 @@ if (homepage) {
         end: 'bottom top',
         scrub: 1,
         pin: true,
-        snap: 4
+        snap: 1
       }
   });
 
