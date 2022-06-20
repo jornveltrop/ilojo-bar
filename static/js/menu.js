@@ -10,9 +10,16 @@ closeMenuBtn.addEventListener("click", () => {
     closeNav();
 });
 
+menuBtn.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      menuBtn.click();
+    }
+  });
+
 function openNav() {
     sideMenu.style.width = "250px";
-    sideMenu.style.padding = "50px 0px 0px 0px";
+    sideMenu.style.padding = "0px 0px 0px 0px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
   

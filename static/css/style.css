@@ -794,8 +794,8 @@ input:checked+.slider:before {
   }
   
   .sideMenu .closebtn {
-    padding: 0px 30px 30px 30px;
-    position: absolute;
+    /* padding: 0px 30px 30px 30px; */
+    /* position: absolute; */
     top: 0;
     left: 0;
     font-size: 4em;
