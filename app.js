@@ -4,11 +4,23 @@ import express from 'express'
 import * as prismicH from '@prismicio/helpers'
 import { client } from './config/prismicConfig.js'
 import expressLayouts from 'express-ejs-layouts';
+import compression from 'compression';
 
 //Variabelen
 const app = express();
 const port = process.env.PORT || 3000;
-// const apiKey = process.env.APIKEY;
+
+
+// Compress alle responses
+app.use(compression())
+
+// Cached alles behalve HTML voor 1 jaar (see https://ashton.codes/set-cache-control-max-age-1-year/).
+app.use(function(req, res, next) {
+    if (req.method == "GET" && !(req.rawHeaders.toString().includes("text/html"))) {
+        res.set("Cache-control", "public, max-age=31536000")
+    }
+    next()
+})
 
 // Aangeven waar onze statishce files zich bevinden  
 app.use(express.static('static'));

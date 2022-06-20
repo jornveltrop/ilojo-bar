@@ -5,6 +5,24 @@
     --red: #8c0500;
 }
 
+@font-face {
+    font-family: 'Austral Sans';
+    src: url('/fonts/AustralSansStamp-Regular.woff2') format('woff2'),
+        url('/fonts/AustralSansStamp-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Black Ground';
+    src: url('/fonts/Black-Ground.woff2') format('woff2'),
+        url('/fonts/Black-Ground.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,7 +40,8 @@ body {
     background-color: var(--light);
     font-family: 'Austral Sans', sans-serif;
 
-    background: url(/images/BG_red.jpg) no-repeat;
+    background-image: url(/images/BG_red.webp);
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
@@ -93,7 +112,7 @@ button {
 }
 
 .btn_a {
-    background: url('/images/button_bg_light.svg');
+    background-image: url('/images/button_bg_light.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -119,7 +138,7 @@ button {
 }
 
 .btn_square {
-    background-image: url('/images/button_bg_light_square.svg');
+    background-image: url('/images/button_bg_light_square.webp');
     padding: 1.6em;
 }
 
@@ -182,11 +201,12 @@ header.home p > span {
 
 .mask_span {
     display: inline-block;
-    transform: translateY(calc(100% + 10px));
+    transform: translateY(0%);
 }
 
 header.home img {
     height: 5.5em;
+    width: auto;
     margin-top: 3em;
     filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 0.4));
     transform-origin: top right;
@@ -202,7 +222,8 @@ main.home {
 
 /* Scrolltrigger section */
 .img_cont {
-    background: url(/images/BG_red.jpg) no-repeat;
+    background-image: url(/images/BG_red.webp);
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -211,6 +232,7 @@ main.home {
 }
 
 .scroll_cont {
+    transform: scale(1.6);
     transform-origin: 86% 50%;
     height: 100%;
 }
@@ -228,6 +250,10 @@ main.home {
     transform-origin: 80% 50%;
 }
 
+#background, #overlay, #color_building {
+    opacity: 0;
+}
+
 
 /* Discover button section */
 .discover_cont {
@@ -237,7 +263,7 @@ main.home {
     display: flex;
     align-items: center;
     flex-direction: column;
-    opacity: 0;
+    opacity: 1;
     z-index: 0;
 }
 
@@ -256,6 +282,7 @@ main.home {
 
 .see_model_cont img {
     height: 3em;
+    width: auto;
 }
 
 .see_model_cont p {
@@ -277,6 +304,10 @@ footer.home {
     justify-content: center;
     z-index: 1;
     pointer-events: all;
+}
+
+.scroll_btn {
+    opacity: 0;
 }
 
 .scroll_btn i {
@@ -404,9 +435,11 @@ main.discover {
     justify-content: center;
 }
 
+
 .discover li img {
     object-fit: contain;
     height: 90%;
+    width: auto;
 }
 
 .window {
@@ -449,11 +482,11 @@ li:hover .window_R {
     align-items: flex-end;
     justify-content: center;
 
-    mask-image: url(/images/windows.png);
+    mask-image: url(/images/windows.webp);
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: bottom;
-    -webkit-mask-image: url(/images/windows.png);
+    -webkit-mask-image: url(/images/windows.webp);
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: bottom;
@@ -644,7 +677,7 @@ main.model {
 
 .backBtn img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .backBtn:hover {
@@ -666,7 +699,7 @@ main.model {
 
 .menuBtn img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .menuBtn:hover {
