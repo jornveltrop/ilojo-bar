@@ -17,13 +17,12 @@
                 <div class="window_wrap">
                     <div class="window_img_cont">
                         <div class="window_img_inner">
-                            <% console.log(story.collage_image) %>
                             <img src="<%- story.collage_image.url %>" alt="<%- story.collage_image.alt %>">
                         </div>
                     </div>
-                    <img class="window door window_L" src="/images/window_L.png" />
-                    <img class="window door window_R" src="/images/window_R.png" />
-                    <img class="window window_bg" src="/images/window_bg.png" />
+                    <img class="window door window_L" src="/images/window_L.png" alt="window left side Ilojo bar"/>
+                    <img class="window door window_R" src="/images/window_R.png" alt="window right side Ilojo bar"/>
+                    <img class="window window_bg" src="/images/window_bg.png" alt="window Ilojo bar"/>
                 </div>
                 <h3><%- story.title %></h3>
                 <a href="<%- story.url %>" aria-label="<%- story.title %>" class="btn_a">Discover</a>
