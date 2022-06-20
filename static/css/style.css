@@ -551,6 +551,13 @@ main.story {
     }
 }
 
+/* OFFLINE PAGE */
+main.offline{
+    width: 100%;
+    height: calc(100vh - calc(1.6em + 50px));
+}
+
+
 
 /* 3D MODEL PAGE */
 main.model {
