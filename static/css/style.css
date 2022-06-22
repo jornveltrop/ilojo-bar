@@ -674,11 +674,9 @@ main.model {
     background-color: transparent;
     border: none;
     width: 4em;
-    height: 4em;
+    height: auto;
     top: 0;
     left: 0;
-    /* margin-top: 0.5em; */
-    /* margin-left: 0.8em; */
     opacity: 0.5;
     transition: 0.3s linear;
 }
@@ -895,6 +893,14 @@ input:checked+.slider:before {
 
     .story article {
         gap: 1.3em;
+    }
+
+    .backBtn {
+        width: 5em;
+    }
+
+    .menuBtn{
+        width: 5em;
     }
 }
 
