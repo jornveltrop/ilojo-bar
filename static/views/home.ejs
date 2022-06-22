@@ -1,25 +1,45 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
-
 <header class="home">
-    <img src="/images/Logo_IlojoBar.svg">
+    <picture>
+        <source srcset="/images/Logo_IlojoBar.webp" type="image/webp">
+        <source srcset="/images/Logo_IlojoBar.png" type="image/png">
+        <img src="/images/Logo_IlojoBar.png" width="957px" height="338px">
+    </picture>
     <a href="/discover"><p class="subtitle"><span><span class="mask_span">Discover <u>9 stories</u> about the shattered bar of Lagos</span></span></p></a>
 </header>
 
 <main class="home">
     <section class="img_cont">
         <div class="scroll_cont">
-            <img src="/images/ilojo_bar_bw_2.png">
-            <img id="background" src="/images/ilojo_bar_bw_1.jpg">
-            <img id="color_building" src="/images/ilojo_bar_bw_2.png" style="opacity: 0;">
-            <img id="overlay"src="/images/ilojo_bar_bw_3.png">
+            <picture>
+                <source srcset="/images/ilojo_bar_bw_2.webp" type="image/webp">
+                <source srcset="/images/ilojo_bar_bw_2.png" type="image/png">
+                <img src="/images/ilojo_bar_bw_2.png" width="1772px" height="1772px">
+            </picture>
+            <picture>
+                <source srcset="/images/ilojo_bar_bw_1.webp" type="image/webp">
+                <source srcset="/images/ilojo_bar_bw_1.jpg" type="image/jpeg">
+                <img id="background" src="/images/ilojo_bar_bw_1.jpg" width="1772px" height="1772px">
+            </picture>
+            <picture>
+                <source srcset="/images/ilojo_bar_bw_2.webp" type="image/webp">
+                <source srcset="/images/ilojo_bar_bw_2.png" type="image/png">
+                <img id="color_building" src="/images/ilojo_bar_bw_2.png" width="1772px" height="1772px">
+            </picture>
+            <picture>
+                <source srcset="/images/ilojo_bar_bw_3.webp" type="image/webp">
+                <source srcset="/images/ilojo_bar_bw_3.png" type="image/png">
+                <img id="overlay" src="/images/ilojo_bar_bw_3.png" width="1772px" height="1772px">
+            </picture>
         </div>
     </section>
 
     <div class="see_model_cont">
         <a href="/3D_model" class="btn_a btn_square">
-            <img src="/images/3d_building.png">
+            <picture>
+                <source srcset="/images/3d_building.webp" type="image/webp">
+                <source srcset="/images/3d_building.png" type="image/png">
+                <img src="/images/3d_building.png" width="270px" height="182px" loading=lazy>
+            </picture>
             <p>Show in 3D</p>
         </a>
     </div>
@@ -35,3 +55,5 @@
 <footer class="home">
     <button class="scroll_btn"><i></i>Scroll down</button>
 </footer>
+
+<script defer src="/js/lib/gsap-stp-st.js"></script>

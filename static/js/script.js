@@ -10,7 +10,7 @@ if (homepage) {
 
 
   tl.from("header img", {translateY: "-210%", rotation: "-10", duration: 2.5, ease: "elastic", delay: .5})
-    .to(".mask_span", { y: "0%", duration: 0.7, stagger: 0.2 }, "<15%")
+    .from(".mask_span", { y: "150%", duration: 0.7, stagger: 0.2 }, "<15%")
     .from(".scroll_btn", {translateY: "300px", ease: Power1.easeOut}, "<")
 
 
@@ -25,11 +25,11 @@ if (homepage) {
       }
   });
 
-  scrollTL.to('.scroll_btn', {opacity: 0, duration: .3} )
-          .to('.scroll_cont', {scale: 1.6},"<")
+  scrollTL.fromTo('.scroll_btn', {opacity: 1, duration: .3}, {opacity: 0} )
+          .from('.scroll_cont', {scale: 1},"<")
           .fromTo('#color_building', {opacity: 0}, {opacity: 1},"<")
-          .to('#background', {opacity: 0},"-=50%")
-          .to('#overlay', {opacity: 0, scale: 1.05}, "<25%")
+          .fromTo('#background', {opacity: 1}, {opacity: 0},"-=50%")
+          .fromTo('#overlay', {opacity: 1, scale: 1}, {opacity: 0, scale: 1.05}, "<25%")
           .fromTo('.discover_cont',{opacity: 0, zIndex: 0, scale: 0.9, rotation:-3}, {opacity: 1, zIndex: 2, scale: 1, rotation:0}, "<")
           .from('.see_model_cont',{ translateX: "100%", opacity: "0"}, "<")
           .addLabel('end')
@@ -65,8 +65,6 @@ if (discover) {
     inViewObserver.observe(element)
   })
 
-
-  
 
 
   function mouseMoveFunc(evt) {

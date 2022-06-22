@@ -1,10 +1,5 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
 
 <%- include('./partials/header.ejs') %>
-
-<script defer src="/js/horizontalScroll.js"></script>
 
 <main class="discover"> 
     <header>
@@ -13,16 +8,16 @@
     
     <ol class="storiesList">
         <% discoverList.forEach(story => { %>
-            <li> 
+            <li class="in-view"> 
                 <div class="window_wrap">
                     <div class="window_img_cont">
                         <div class="window_img_inner">
-                            <img src="<%- story.collage_image.url %>">
+                            <img src="<%- story.collage_image.url %>" loading="lazy" width="350px" height="300px">
                         </div>
                     </div>
-                    <img class="window door window_L" src="/images/window_L.png" />
-                    <img class="window door window_R" src="/images/window_R.png" />
-                    <img class="window window_bg" src="/images/window_bg.png" />
+                    <img class="window door window_L" srcset="/images/window_L.webp" src="/images/window_L.png" width="354px" height="525px" draggable="false" />
+                    <img class="window door window_R" srcset="/images/window_R.webp" src="/images/window_R.png" width="354px" height="525px" draggable="false"/>
+                    <img class="window window_bg" srcset="/images/window_bg.webp" src="/images/window_bg.png" width="354px" height="525px" draggable="false" />
                 </div>
                 <h3><%- story.title %></h3>
                 <a href="<%- story.url %>" aria-label="<%- story.title %>" class="btn_a">Discover</a>
@@ -30,5 +25,8 @@
        <% }); %>
     </ol>
 </main>
+
+<script defer src="/js/lib/gsap.js"></script>
+<script defer src="/js/horizontalScroll.js"></script>
 
 

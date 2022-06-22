@@ -8,13 +8,23 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 import compression from 'compression'
 
+
 //Variabelen
 const app = express();
 const port = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// const apiKey = process.env.APIKEY;
+// Compress alle responses
+app.use(compression())
+
+// Cached alles behalve HTML voor 1 jaar (see https://ashton.codes/set-cache-control-max-age-1-year/).
+app.use(function(req, res, next) {
+    if (req.method == "GET" && !(req.rawHeaders.toString().includes("text/html"))) {
+        res.set("Cache-control", "public, max-age=31536000")
+    }
+    next()
+})
 
 // Aangeven waar onze statishce files zich bevinden  
 app.use(express.static('static'));
