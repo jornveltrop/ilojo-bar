@@ -1,6 +1,3 @@
-<script defer src="/js/lib/gsap.min.js"></script>
-<script defer src="/js/lib/ScrollTrigger.min.js"></script>
-<script defer src="/js/scrollingStory.js"></script>
 
 <%- include('./partials/header.ejs') %>
 
@@ -40,3 +37,6 @@
     </article>
 </main>
 
+<% if(alinea.alinea_id == "wreckingBall"){ %>
+    <script defer src="/js/lib/gsap-stp-st.js"></script>
+<% } %>
