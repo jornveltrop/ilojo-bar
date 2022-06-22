@@ -1,6 +1,7 @@
 let nav = document.querySelector('nav')
 let menuBtn = document.querySelector('.menuBtn'); 
 let closeMenuBtn = document.querySelector('.close_btn'); 
+let linksMenu = document.querySelectorAll('nav li a')
 
 menuBtn.addEventListener("click", () => {
     openNav();
@@ -17,10 +18,20 @@ menuBtn.addEventListener("keypress", function(event) {
     }
   });
 
+  console.log(linksMenu)
+
 function openNav() {
     nav.classList.add('open')
+    closeMenuBtn.tabIndex = 0;
+    linksMenu.forEach(link => {
+        link.tabIndex = 0;
+    });
 }
   
 function closeNav() {
     nav.classList.remove('open')
+    closeMenuBtn.tabIndex = -1;
+    arlinksMenuray.forEach(link => {
+        link.tabIndex = -1;
+    });
 }
