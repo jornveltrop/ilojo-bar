@@ -1,5 +1,4 @@
-/*
-const CACHE_VERSION = 37;
+const CACHE_VERSION = 39;
 
 const CORE = 'core-cache';
 const CORE_FILES = [
@@ -7,35 +6,45 @@ const CORE_FILES = [
   '/js/menu.js',
   '/js/horizontalScroll.js',
   '/js/scrollingStory.js',
+  '/js/lib/gsap-st.js',
+  '/js/lib/gsap-stp-st.js',
+  '/js/lib/gsap.js',
 
   '/css/style.css',
-  '/css/fonts.css',
 
   '/fonts/AustralSansStamp-Regular.woff',
   '/fonts/AustralSansStamp-Regular.woff2',
   '/fonts/Black-Ground.woff2', 
   '/fonts/Black-Ground.woff',
 
-  '/images/1E93D486B7D38550.png',
   '/images/3d_building.png',
-  '/images//87106589770D0518.png',
-  '/images/arrow.svg',
-  '/images/BG_red.jpg',
-  '/images/button_bg_light_square.svg', 
-  '/images/button_bg_light.svg',
-  '/images/E55A9650BADB6956.png',
-  '/images/FFAEC61EFE6EDA82.png',
+  '/images/3d_building.webp',
+  '/images/arrow.png',
+  '/images/arrow.webp',
+  '/images/BG_red.jpeg',
+  '/images/BG_red.webp',
+  '/images/button_bg_light_square.png', 
+  '/images/button_bg_light_square.webp', 
+  '/images/button_bg_light.png',
+  '/images/button_bg_light.webp',
   '/images/ilojo_bar_bw_1.jpg',
+  '/images/ilojo_bar_bw_1.webp',
   '/images/ilojo_bar_bw_2.png',
+  '/images/ilojo_bar_bw_2.webp',
   '/images/ilojo_bar_bw_3.png',
-  '/images/ilojo_bar_bw.jpg',
-  '/images/Ilojo_Bar.png',
-  '/images/Logo_IlojoBar.svg',
-  '/images/menu.svg',
-  '/images/stone_bg.jpg',
+  '/images/ilojo_bar_bw_3.webp',
+  '/images/Logo_IlojoBar.png',
+  '/images/Logo_IlojoBar.webp',
+  '/images/menu.png',
+  '/images/menu.webp',
   '/images/window_bg.png', 
+  '/images/window_bg.webp', 
   '/images/window_L.png', 
+  '/images/window_L.webp', 
   '/images/window_R.png', 
+  '/images/window_R.webp', 
+  '/images/windows.png', 
+  '/images/windows.webp', 
 
   'offline'
 ]
