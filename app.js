@@ -17,12 +17,12 @@ const port = process.env.PORT || 3000;
 app.use(compression())
 
 // Cached alles behalve HTML voor 1 jaar (see https://ashton.codes/set-cache-control-max-age-1-year/).
-// app.use(function(req, res, next) {
-//     if (req.method == "GET" && !(req.rawHeaders.toString().includes("text/html"))) {
-//         res.set("Cache-control", "public, max-age=31536000")
-//     }
-//     next()
-// })
+app.use(function(req, res, next) {
+    if (req.method == "GET" && !(req.rawHeaders.toString().includes("text/html"))) {
+        res.set("Cache-control", "public, max-age=31536000")
+    }
+    next()
+})
 
 // Aangeven waar onze statische files zich bevinden  
 app.use(express.static('static'));

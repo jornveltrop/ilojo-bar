@@ -769,6 +769,9 @@ nav ul {
     display: flex;
     gap: 1em;
     flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
+    padding-bottom: 4em;
 }
 
 nav li {
@@ -906,8 +909,14 @@ nav a:after {
     .backBtn, .menuBtn {
         width: 4.1em;
     }
+
+    .scroll_cont {
+        transform-origin: 85% 50%;
+    }
 }
 
-
-
-
+@media only screen and (max-width: 550px) {
+    .scroll_cont {
+        transform-origin: 72% 50%;
+    }
+}
