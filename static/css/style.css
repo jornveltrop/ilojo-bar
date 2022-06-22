@@ -358,7 +358,15 @@ footer.home {
     background: transparent;
     height: auto;
     text-align: center;
-    font-size: .8em;
+    font-size: 1em;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-family: 'Austral Sans', sans-serif;
+}
+
+.scroll_btn span{
+    text-align: center;
+    font-size: 1.3em;
     color: #ffffff;
     letter-spacing: 1px;
     font-family: 'Austral Sans', sans-serif;
