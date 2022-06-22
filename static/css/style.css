@@ -900,11 +900,7 @@ input:checked+.slider:before {
         gap: 1.3em;
     }
 
-    .backBtn {
-        width: 5em;
-    }
-
-    .menuBtn{
+    .backBtn, .menuBtn {
         width: 5em;
     }
 }
