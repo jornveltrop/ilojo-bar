@@ -45,6 +45,11 @@ const CORE_FILES = [
   '/images/window_R.webp', 
   '/images/windows.png', 
   '/images/windows.webp', 
+  '/images/menuSide.png', 
+  '/images/menuSide.webp', 
+  '/images/close.png', 
+  '/images/close.webp', 
+  
 
   'offline'
 ]

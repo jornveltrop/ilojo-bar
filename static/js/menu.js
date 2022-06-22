@@ -1,6 +1,7 @@
-let sideMenu = document.querySelector('.sideMenu')
+let nav = document.querySelector('nav')
 let menuBtn = document.querySelector('.menuBtn'); 
-let closeMenuBtn = document.querySelector('.closebtn'); 
+let closeMenuBtn = document.querySelector('.close_btn'); 
+let linksMenu = document.querySelectorAll('nav li a')
 
 menuBtn.addEventListener("click", () => {
     openNav();
@@ -13,18 +14,24 @@ closeMenuBtn.addEventListener("click", () => {
 menuBtn.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
       event.preventDefault();
-      menuBtn.click();
+      openNav()
     }
   });
 
+  console.log(linksMenu)
+
 function openNav() {
-    sideMenu.style.width = "250px";
-    sideMenu.style.padding = "0px 0px 0px 0px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    nav.classList.add('open')
+    closeMenuBtn.tabIndex = 0;
+    linksMenu.forEach(link => {
+        link.tabIndex = 0;
+    });
 }
   
 function closeNav() {
-    sideMenu.style.width = "0";
-    sideMenu.style.padding = "0px";
-    document.body.style.backgroundColor = "white";
+    nav.classList.remove('open')
+    closeMenuBtn.tabIndex = -1;
+    arlinksMenuray.forEach(link => {
+        link.tabIndex = -1;
+    });
 }
