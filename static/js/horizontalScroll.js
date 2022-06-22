@@ -21,7 +21,6 @@ function setScrolling() {
   }, {passive: true});
   slider.addEventListener('mousemove', (e) => {
     if(!isDown) return;
-    e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
     const walk = (x - startX); //scroll-fast
     slider.scrollLeft = scrollLeft - walk;
@@ -29,7 +28,6 @@ function setScrolling() {
   }, {passive: true})
 
   slider.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
     slider.scrollLeft += evt.deltaY;
   }, {passive: true});
 }
@@ -51,7 +49,6 @@ function removeScrolling() {
   }, {passive: true});
   slider.removeEventListener('mousemove', (e) => {
     if(!isDown) return;
-    e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
     const walk = (x - startX); //scroll-fast
     slider.scrollLeft = scrollLeft - walk;
@@ -59,7 +56,6 @@ function removeScrolling() {
   }, {passive: true})
 
   slider.removeEventListener("wheel", (evt) => {
-    evt.preventDefault();
     slider.scrollLeft += evt.deltaY;
   }, {passive: true});
 }

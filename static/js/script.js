@@ -92,6 +92,14 @@ function init() {
           goBackLink.removeEventListener("click", historyGoBack)
       }
       goBackLink.addEventListener("click", historyGoBack)
+
+      goBackLink.addEventListener("keypress", function(event) {
+        console.log("enter")
+        if (event.key === "Enter") {
+          event.preventDefault();
+          goBackLink.click();
+        }
+      });
   }
 
   //Register/update the service worker
