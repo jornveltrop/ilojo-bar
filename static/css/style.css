@@ -430,7 +430,6 @@ main.discover {
 
 .discover li .window_wrap {
     height: 60vh;
-    margin: 0em 0 1em 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -528,6 +527,7 @@ main.story {
 .story section {
     display: flex;
     gap: 1em;
+    font-size: 1.3em;
 }
 
 .story section:nth-child(2n) {
@@ -873,8 +873,28 @@ input:checked+.slider:before {
 
 
 @media only screen and (max-width: 756px) {
+    main {
+        padding: .8em 1.9em;
+    }
+
     .discover ol {
         scroll-snap-type: x mandatory;
+    }
+    
+    .story section, .story section:nth-child(2n) { 
+        flex-direction: column-reverse;
+    }   
+
+    .alinea_image {
+        width: 100%;
+    }
+
+    .alinea_image+div {
+        width: 100%;
+    }
+
+    .story article {
+        gap: 1.3em;
     }
 }
 
