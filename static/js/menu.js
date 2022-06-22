@@ -18,8 +18,6 @@ menuBtn.addEventListener("keypress", function(event) {
     }
   });
 
-  console.log(linksMenu)
-
 function openNav() {
     nav.classList.add('open')
     closeMenuBtn.tabIndex = 0;

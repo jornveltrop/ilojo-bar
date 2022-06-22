@@ -6,6 +6,8 @@ const CORE_FILES = [
   '/js/menu.js',
   '/js/horizontalScroll.js',
   '/js/scrollingStory.js',
+  '/js/discover.js',
+  '/js/mainScrollTrigger.js',
   '/js/lib/gsap-st.js',
   '/js/lib/gsap-stp-st.js',
   '/js/lib/gsap.js',
