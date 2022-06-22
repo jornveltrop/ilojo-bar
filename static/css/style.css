@@ -711,11 +711,24 @@ nav {
     top: 0;
     right: 0px;
     background-color: var(--dark);
-    overflow-x: hidden;
-    transition: 0.5s ease-in-out;
+    transition: transform .75s ease-in-out;
     padding: 2em 3.3em;
     margin-left: 0px;
-    transform: translateX(100%);
+    transform: translateX(110%);
+}
+
+nav:after {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -37px;
+    background-image: url(/images/menuSide.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    width: 46px;
 }
 
 nav.open {
