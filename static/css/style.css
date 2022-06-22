@@ -678,7 +678,7 @@ main.model {
 .backBtn {
     background-color: transparent;
     border: none;
-    width: 4em;
+    width: 3.5em;
     height: auto;
     top: 0;
     left: 0;
@@ -729,7 +729,7 @@ nav .close_cont {
 }
   
 nav .close_btn {
-    width: 4em;
+    width: 3.5em;
 }
 
 nav .close_btn img {
@@ -767,7 +767,7 @@ nav a {
     transition: transform 1s ease;
 }
 
-nav a.active {
+nav a.active, nav a.active h2 {
     color: var(--redLight);
 }
 
@@ -800,8 +800,8 @@ nav a:after {
     position: relative;
     background-color: transparent;
     border: none;
-    width: 4em;
-    height: 4em;
+    width: 3.5em;
+    height: auto;
     top: 0;
     left: 0;
     opacity: 0.5;
