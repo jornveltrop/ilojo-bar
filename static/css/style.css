@@ -572,7 +572,12 @@ main.story {
     overflow-y: clip;
 }
 
+.containerWreckingBall{
+    overflow: hidden;
+}
+
 .wrecker {
+    max-width: 80%;
     display: block;
     width: 200px;
     height: 200px;
