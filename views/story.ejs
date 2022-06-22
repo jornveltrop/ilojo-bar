@@ -20,7 +20,9 @@
                     <%- ctx.prismicH.asHTML(alinea.alinea) %>
 
                     <% if(alinea.alinea_id == "wreckingBall"){ %>
-                        <div class="wrecker"></div>
+                        <div class="containerWreckingBall">
+                            <div class="wrecker"></div>
+                        </div>
                     <% } %>
                     </div>
             </section>
@@ -37,6 +39,5 @@
     </article>
 </main>
 
-<% if(alinea.alinea_id == "wreckingBall"){ %>
-    <script defer src="/js/lib/gsap-stp-st.js"></script>
-<% } %>
+<script defer src="/js/lib/gsap-stp-st.js"></script>
+<script defer src="/js/scrollingStory.js"></script>

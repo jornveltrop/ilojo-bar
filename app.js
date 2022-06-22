@@ -12,8 +12,8 @@ import compression from 'compression'
 //Variabelen
 const app = express();
 const port = process.env.PORT || 3000;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // Compress alle responses
 app.use(compression())
@@ -26,16 +26,13 @@ app.use(function(req, res, next) {
     next()
 })
 
-// Aangeven waar onze statishce files zich bevinden  
+// Aangeven waar onze statische files zich bevinden  
 app.use(express.static('static'));
-// compress all responses
-app.use(compression())
 
 // Templating engine
 app.use(expressLayouts)
 app.set('layout', './layouts/main')
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/static/views'));
 
 
 app.use((req, res, next) => {
