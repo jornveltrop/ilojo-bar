@@ -197,6 +197,149 @@ After that we wanted some animation. We simply rotated the y rotation of the obj
 
 https://user-images.githubusercontent.com/44086608/174762203-3fd11331-3024-4b24-8d45-dd0efb79a4c2.mp4
  
+### Discover stories
+Op de discover stories pagina's hebben we elk verhaal gekoppeld aan een gevel. Het lijkt alsof je elke keer door de gevel kijkt naar een moment uit de Ilojo Bar. Door de foto's achter de ramen te plaatsen en deze op hover open te laten gaan en op mobiel zodra deze in beeld zijn, zullen mensen nieuwsgierig worden naar de verhalen. Je wordt getriggerd om de verhalen te ontdekken.
+
+De verschillende verhalen worden op gehaald vanuit het Headless CMS, met server side templating worden deze omgezet in html.
+
+```ejs
+<ol class="storiesList">
+    <% discoverList.forEach(story => { %>
+        <li class="in-view"> 
+            <div class="window_wrap">
+                <div class="window_img_cont">
+                    <div class="window_img_inner">
+                        <img src="<%- story.collage_image.url %>" alt="<%- story.collage_image.alt %>" loading="lazy" width="350px" height="300px">
+                    </div>
+                </div>
+                <img class="window door window_L" srcset="/images/window_L.webp" src="/images/window_L.png" alt="window left side Ilojo bar" width="354px" height="525px" draggable="false" />
+                <img class="window door window_R" srcset="/images/window_R.webp" src="/images/window_R.png" alt="window right side Ilojo bar" width="354px" height="525px" draggable="false"/>
+                <img class="window window_bg" srcset="/images/window_bg.webp" src="/images/window_bg.png" alt="window Ilojo bar" width="354px" height="525px" draggable="false" />
+            </div>
+            <h3><%- story.title %></h3>
+            <a href="<%- story.url %>" aria-label="<%- story.title %>" class="btn_a">Discover</a>
+        </li>
+   <% }); %>
+</ol>
+```
+
+De gevels zijn gemaakt met verschillende lagen foto's over elkaar heen. Deze zijn helemaal responsive gemaakt met CSS.
+
+```css
+.discover li {
+    scroll-snap-align: center;
+    height: 100%;
+    display: flex;
+    color: var(--light);
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: .5em;
+}
+
+.discover li .window_wrap {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.discover li img {
+    object-fit: contain;
+    height: 90%;
+    width: auto;
+}
+
+.window {
+    position: absolute;
+}
+
+.door {
+    z-index: 2;
+    transition: transform 1s ease, filter 1s ease;
+}
+
+.window_L {
+    transform-origin: 16.28%;
+}
+
+.window_R {
+    transform-origin: 86.04%;
+}
+
+.window_bg {
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.4));
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.4));
+}
+
+.window_img_cont {
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    mask-image: url(/images/windows.webp);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: bottom;
+    -webkit-mask-image: url(/images/windows.webp);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: bottom;
+}
+
+.window_img_inner {
+    height: 56%;
+    width: 39vh;
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.4));
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.4));
+}
+
+.discover .window_img_inner > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+```
+
+
+Ook het animeren van de windows wordt in CSS gedaan:
+[gifje windows]
+
+```css
+li:hover .window_L {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);
+    -webkit-filter: drop-shadow(10px 6px 5px rgba(0,0,0,.2));
+    filter: drop-shadow(10px 6px 5px rgba(0,0,0,.2));
+}
+
+li:hover .window_R {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
+    -webkit-filter: drop-shadow(-10px 6px 5px rgba(0,0,0,.2));
+    filter: drop-shadow(-10px 6px 5px rgba(0,0,0,.2));
+}
+
+@media only screen and (max-width: 1220px) {
+    .in-view .window_L {
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);
+        -webkit-filter: drop-shadow(10px 6px 5px rgba(0,0,0,.2));
+        filter: drop-shadow(10px 6px 5px rgba(0,0,0,.2));
+    }
+
+    .in-view .window_R {
+        transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(110deg);
+        -webkit-filter: drop-shadow(-10px 6px 5px rgba(0,0,0,.2));
+        filter: drop-shadow(-10px 6px 5px rgba(0,0,0,.2));
+    }
+}
+```
+
+
+
+ 
+
+
+ 
 ### Performance 
 The site is for the people in Lagos where sadly the internet connection is poorly and many people do not have the newest phones. To still make our site working, we made some changes to optimise our performance. 
 
