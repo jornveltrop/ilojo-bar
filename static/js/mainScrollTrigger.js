@@ -1,5 +1,3 @@
-const homepage = document.querySelector('.home')
-
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 gsap.defaults({overwrite: "auto"});
 
