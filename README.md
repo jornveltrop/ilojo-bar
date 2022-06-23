@@ -1,14 +1,20 @@
 # Ilojo Bar
 
-![Ilojo Bar](https://github.com/cmda-minor-web-cases/ilojo-bar/blob/main/assets/ilojo-bar.jpg?raw=true)
+![174823571-a708bbf2-4e10-48c0-aef2-89aa51717668](https://user-images.githubusercontent.com/44086608/175252176-13084c5e-dc35-4b4d-a8c2-986ad0e68d2a.jpg)
 
 ## Table of contents
   * [Design Rationale](#DesignRationale)
+  * [Introduction](#Introduction)
      * [Debriefing](#Debriefing)
      * [Problem Definition](#ProblemDefinition)
      * [Solution](#Solution)
      * [Code](#Code)
   * [License](#License)
+
+## Introduction <a name="Introduction"> 
+Ilojo Bar of Casa do Fernandez was a national monument in Lagos, Nigeria, that was illegaly demolished in 2016. Ilojo bar was designed and build by Africans in the 19th century who returned from slavery in Brazil. Legacy wanted us to build a site that gives a remembrance of the building with it's many stories plus a visualisation of how it once was. 
+
+This was our end assignment for the minor web development. Here you can read our design rationale where we explain the problem and explain our solutions plus how we made them. 
  
 ## Design Rationale <a name="DesignRationale">
 
