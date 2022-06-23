@@ -2,10 +2,10 @@
 const inViewObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // do stuff when in view
+      // Add class on window when in view
       entry.target.classList.add('in-view')
     } else {
-      // do stuff when not in view
+      // Remove class on window when in view
       entry.target.classList.remove('in-view')
     }
   })
@@ -100,6 +100,7 @@ function removeScrolling() {
 
 setScrolling()
 
+//Check mobile for setting event listeners
 function checkScreen() {
   let windowWidth = window.innerWidth;
 
@@ -111,6 +112,7 @@ function checkScreen() {
   }
 }
 
+// When mobile set scrolling event listeners
 function changeScrollSettings(){
   if(slider.classList.contains("isMobile") && !settingsSetted){
     setScrolling()

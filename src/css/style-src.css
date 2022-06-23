@@ -72,13 +72,6 @@ h4 {
     letter-spacing: .05em;
 }
 
-body > header {
-    color: var(--light);
-    padding: .8em 1em;
-    display: flex;
-    justify-content: space-between;
-}
-
 p {
     margin: 1em 0;
 }
@@ -86,12 +79,6 @@ p {
 main {
     padding: .8em 1em;
     width: 100%;
-}
-
-.headerLogo {
-    height: 50px;
-    width: auto;
-    display: block;
 }
 
 a {
@@ -171,6 +158,13 @@ button {
     position: fixed;
 }
 
+body > header {
+    color: var(--light);
+    padding: .8em 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* HOMEPAGE */
 
 /* Header */
@@ -210,6 +204,10 @@ header.home img {
     margin-top: 3em;
     filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 0.4));
     transform-origin: top right;
+}
+
+.homeAnchor {
+    display: block;
 }
 
 
@@ -267,6 +265,7 @@ main.home {
     z-index: 0;
 }
 
+/* See model section */
 .see_model_cont {
     position: fixed;
     top: calc(50vh - 48px);
@@ -363,7 +362,7 @@ footer.home {
     font-family: 'Austral Sans', sans-serif;
 }
 
-.scroll_btn span{
+.scroll_btn span {
     text-align: center;
     font-size: 1.2em;
     color: #ffffff;
@@ -372,7 +371,6 @@ footer.home {
 }
 
 /* DISCOVER PAGE */
-
 main.discover {
     display: flex;
     flex-direction: column;
@@ -428,11 +426,6 @@ main.discover {
     align-items: center;
     position: relative;
     padding-top: .5em;
-}
-
-.no_snap {
-    scroll-snap-align: none;
-    scroll-snap-type: none;
 }
 
 .discover li .window_wrap {
@@ -643,7 +636,6 @@ main.offline{
 }
 
 
-
 /* 3D MODEL PAGE */
 main.model {
     display: flex;
@@ -703,11 +695,6 @@ main.model {
 }
 
 
-/* Header */
-.homeAnchor {
-    display: block;
-}
-
 /* MENU */
 nav {
     height: 100%;
@@ -763,9 +750,7 @@ nav ul {
     display: flex;
     gap: 1em;
     flex-direction: column;
-    overflow-y: scroll;
     height: 100%;
-    padding-bottom: 4em;
 }
 
 nav li {
@@ -860,6 +845,7 @@ nav a:after {
 }
 
 
+/* RESPONSIVE */
 @media only screen and (max-width: 1220px) {
     .in-view .window_L {
         transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);
@@ -912,5 +898,12 @@ nav a:after {
 @media only screen and (max-width: 550px) {
     .scroll_cont {
         transform-origin: 72% 50%;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    nav ul {
+        overflow-y: scroll;
+        padding-bottom: 4em;
     }
 }

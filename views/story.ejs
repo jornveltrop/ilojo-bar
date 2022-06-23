@@ -5,8 +5,10 @@
     
 
     <article>
+        <!-- Make title in html from prismic data -->
         <%- ctx.prismicH.asHTML(storyData.title) %>
 
+        <!-- Make alineas from prismic data -->
         <% alineas.forEach(alinea => { %>
             <section id="<%= alinea.alinea_id %>">
                 <% if(alinea.image.url){ %>
@@ -19,6 +21,7 @@
                     <%- ctx.prismicH.asHTML(alinea.subtitle) %>
                     <%- ctx.prismicH.asHTML(alinea.alinea) %>
 
+                    <!-- Check if wreckingball is on page then show-->
                     <% if(alinea.alinea_id == "wreckingBall"){ %>
                         <div class="containerWreckingBall">
                             <div class="wrecker"></div>

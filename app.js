@@ -30,7 +30,7 @@ app.use(expressLayouts)
 app.set('layout', './layouts/main')
 app.set('view engine', 'ejs');
 
-
+//Prismic helper for every route
 app.use((req, res, next) => {
     res.locals.ctx = {
       prismicH,
@@ -40,12 +40,7 @@ app.use((req, res, next) => {
 
 //Routing
 app.get('/', async (req, res) => {
-    let homepage = await client.getSingle('homepage')
-    let homepageData = homepage.data
-
-    let title = homepageData.title[0].text
-    let subtitle = homepageData.subtitle[0].text
-    res.render('home', { title, subtitle })
+    res.render('home')
 });
 
 app.get('/3D_model', async (req, res) => {
@@ -56,8 +51,8 @@ app.get('/offline', async (req, res) => {
     res.render('offline', {})
 });
 
-//Routing
 app.get('/discover', async (req, res) => {
+    //Get all stories from Prismic
     let stories = await client.getAllByType('story', {
         orderings: {
           field: 'my.story.id',
@@ -65,6 +60,7 @@ app.get('/discover', async (req, res) => {
         }
       })
 
+    // Make list of all stories with needed data
     let discoverList = stories.map(story => {
         return {
             "url": story.url, 
@@ -77,6 +73,7 @@ app.get('/discover', async (req, res) => {
 });
 
 app.get('/discover/:id', async (req, res) => {
+    //Get all stories from Prismic
     let stories = await client.getAllByType('story', {
         orderings: {
           field: 'my.story.id',
@@ -85,6 +82,7 @@ app.get('/discover/:id', async (req, res) => {
       })
 
     let uid = req.params.id
+    // Get story from specific url id
     let story = await client.getByUID('story', uid)
     let storyData = story.data
     let alineas = storyData.body[0].items
@@ -106,6 +104,7 @@ app.listen(port, () => {
     console.log(`Gebruikte poort: localhost:${port} !`)
 });
 
+// Get link for previous button in story
 function getPreviousStory(id, stories){
     if(id < 0)
         return;
@@ -116,6 +115,7 @@ function getPreviousStory(id, stories){
     return previousStory;
 }
 
+// Get link for next button in story
 function getNextStory(id, stories){
     if(id > stories.length)
         return;
