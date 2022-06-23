@@ -73,7 +73,7 @@ Legacy also wants to reach out the Lagosians abroad. At last some people can vis
 ### Relationship with other projects
 It falls under Legacy. Legacy keeps busy with other heritages in Nigeria. Sadly we don't have any examples. 
 
-### Problem Definition <a name="ProblemDefinition">
+## Problem Definition <a name="ProblemDefinition">
 The problem Legacy is struggling with, is the remambrance of Ilojo bar. It has been illegally demolished and no sign anymore of it existing. They want to have a visualisation of the building and a display of all the stories from Ilojo bar. They want to make this in a site, where it will run mostly on mobile. Another problem is performance. Most of the people in Nigeria have old phones and the internet is unreliable. 
  
 ## Product <a name="Product">
@@ -89,8 +89,8 @@ For our product we chose a Brazilian style. The bar is namely build by slaves wh
 
 We chose to use the windows of the building as a metaphor for the 9 stories. Behind each window is a story of Ilojo bar.
 
-### Gekozen user stories
-We hebben voor de volgende user stories gekozen om aan te werken:
+### Chosen User Stories
+We worked on the following user stories:
 
 **1. Reading, listening and look at stories about Ilojo bar** <br>
  We made a visualisation of the with the windows of the building for the 9 stories. You can read these stories and look at the photo's that were added for each of them. 
