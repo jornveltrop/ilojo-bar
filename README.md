@@ -65,7 +65,7 @@ The deadline of the first sprint is on the third of june at 13:00. We want to ma
 
 The target audience of the project are the lagosians. Legacy wants them to know their culture and history. A thing that is good to know about these people is that they use their phones a lot and most of them are older versions. That's why we need good support. Beside that they also have bad internet, which is why we also need to take into account that our website should not be that heavy. The most used browser are these in Nigeria:
  
-<img src="https://user-images.githubusercontent.com/44086608/170000883-ad26c145-7519-4990-ae5c-0eda60a75d83.png" width="800">
+<img src="https://user-images.githubusercontent.com/44086608/170000883-ad26c145-7519-4990-ae5c-0eda60a75d83.png" width="500">
   
 Legacy also wants to reach out the Lagosians abroad. At last some people can visit who are interested in history, but these people are not the main focus. 
  
@@ -82,8 +82,8 @@ You can look at our final product using this link:
 
 ### [Ilojo Bar live demo]()
  
-![image](https://user-images.githubusercontent.com/44086608/175311012-25f9715e-c25b-4858-a1e6-6525277077e5.png)
-![image](https://user-images.githubusercontent.com/44086608/175311129-5ab3a7b3-9bf3-4172-8d5b-fc4bdf80ba4b.png)
+<img src="https://user-images.githubusercontent.com/44086608/175311012-25f9715e-c25b-4858-a1e6-6525277077e5.png" width="500"/>
+<img src="https://user-images.githubusercontent.com/44086608/175311129-5ab3a7b3-9bf3-4172-8d5b-fc4bdf80ba4b.png" width="500"/>
 
 For our product we chose a Brazilian style. The bar is namely build by slaves who came back from Brazil. They brought this building style to Nigeria. 
 
@@ -339,7 +339,7 @@ The story pages are dynamically being loaded in with the server with the API. Th
 
 The API is made in a the Headless CMS Primic. The stories are written in Prismic, as well as the photo's being added. 
 
-![image](https://user-images.githubusercontent.com/44086608/175304914-a0231494-152c-46f4-9054-70364c3b7c39.png)
+<img src="https://user-images.githubusercontent.com/44086608/175304914-a0231494-152c-46f4-9054-70364c3b7c39.png" width="500"/>         
 
 Every story is based on an id that is being retrieved from the server.
       
