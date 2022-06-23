@@ -332,7 +332,7 @@ li:hover .window_R {
 ```
          
 ### Story pages
-De story pages worden dynamisch ingeladen met de server door een koppeling met de API. Deze haalt zowel de titel, body tekst en de foto's op. De foto's zorgen voor extra sfeer bij het verhaal. 
+The story pages are dynamically being loaded in with the server with the API. This gets the title, body text and the photo's of each story. The photo's give an visualisation of the story. 
 
 Voor de API wordt gebruik gemaakt van het Headless CMS Prismic. In Prismic worden de verhalen geschreven en foto's toegevoegd.
 
