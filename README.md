@@ -330,6 +330,54 @@ li:hover .window_R {
     }
 }
 ```
+         
+### Story pages
+De story pages worden dynamisch ingeladen met de server door een koppeling met de API. Deze haalt zowel de titel, body tekst en de foto's op. De foto's zorgen voor extra sfeer bij het verhaal. 
+
+Voor de API wordt gebruik gemaakt van het Headless CMS Prismic. In Prismic worden de verhalen geschreven en foto's toegevoegd.
+
+[Foto prismic]
+
+Een story wordt op basis van het id opgehaald in de server.
+
+```nodejs
+app.get('/discover/:id', async (req, res) => {
+    let stories = await client.getAllByType('story', {
+        orderings: {
+          field: 'my.story.id',
+          direction: 'asc'
+        }
+      })
+
+    let uid = req.params.id
+    let story = await client.getByUID('story', uid)
+    let storyData = story.data
+    let alineas = storyData.body[0].items
+    let id = storyData.id - 1;
+
+    let previous = getPreviousStory(id, stories);
+    let next = getNextStory(id, stories);
+
+    res.render('story', { 
+        storyData,
+        alineas,
+        previous,
+        next
+    })
+})
+```
+
+De story pages worden responsive gemaakt met CSS:
+
+```css
+@media only screen and (max-width: 756px) {    
+    .story section, .story section:nth-child(2n) { 
+        flex-direction: column-reverse;
+    }
+}
+
+```
+
  
 ### Performance 
 The site is for the people in Lagos where sadly the internet connection is poorly and many people do not have the newest phones. To still make our site working, we made some changes to optimise our performance. 
