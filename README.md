@@ -35,13 +35,13 @@ Legacy | The Historical and Environmental Group of Nigeria, with in person Femky
 
 Legacy want all the stories brought together and have a visual representation of the building with the stories included.
 #### User stories
-**1 Reading, listening and look at stories about Iloja bar**  
-As a resident from Lagos, member of the Nigerian diaspora of interested world citizen, I want to read listen and see stories online about Iloja bar. This is because I want to know more about the meaning of the building for the metropolis Lagos and the cosmopolitan history of it, that lead from Spain to Brazil. 
+**1 Reading, listening and look at stories about Ilojo bar**  
+As a resident from Lagos, member of the Nigerian diaspora of interested world citizen, I want to read listen and see stories online about Ilojo bar. This is because I want to know more about the meaning of the building for the metropolis Lagos and the cosmopolitan history of it, that lead from Spain to Brazil. 
  
-**2 Adding stories about Iloja bar**  
+**2 Adding stories about Ilojo bar**  
 As an artist/visitor I want to be able to add a story to the website, so that I can add and propagate meaning to the building. 
  
-**3 Experience Iloja bar**   
+**3 Experience Ilojo bar**   
  As a resident from Lagos, member of the Nigerian diaspora of interested world citizen, I want to get a virtual impression of the building, so that I can see how it was in the earlier days. This way it will become a virtual monument of the vanished piece of Nigerian heritage
 
 ### Motive
@@ -58,7 +58,7 @@ Our product will be a visualisation of the building and it's history. You can go
  
 ### Conditions
 
-The deadline of the first sprint is on the third of june at 13:00. We want to make a working prototype to show what we have envisioned. It is necessary that you can go through the stories of Iloja bar, that is something Legacy explicitly want. We have to apply this with our own working API on the website. Legacy also wants a visualisation of the building. 
+The deadline of the first sprint is on the third of june at 13:00. We want to make a working prototype to show what we have envisioned. It is necessary that you can go through the stories of Ilojo bar, that is something Legacy explicitly want. We have to apply this with our own working API on the website. Legacy also wants a visualisation of the building. 
 
 ### Target audience
 
@@ -73,7 +73,7 @@ Legacy also wants to reach out the Lagosians abroad. At last some people can vis
 It falls under Legacy. Legacy keeps busy with other heritages in Nigeria. Sadly we don't have any examples. 
 
 ### Problem Definition <a name="ProblemDefinition">
-The problem Legacy is struggling with, is the remambrance of Iloja bar. It has been illegally demolished and no sign anymore of it existing. They want to have a visualisation of the building and a display of all the stories from Iloja bar. They want to make this in a site, where it will run mostly on mobile. Another problem is performance. Most of the people in Nigeria have old phones and the internet is unreliable. 
+The problem Legacy is struggling with, is the remambrance of Ilojo bar. It has been illegally demolished and no sign anymore of it existing. They want to have a visualisation of the building and a display of all the stories from Ilojo bar. They want to make this in a site, where it will run mostly on mobile. Another problem is performance. Most of the people in Nigeria have old phones and the internet is unreliable. 
  
 ## Product <a name="Product">
  
