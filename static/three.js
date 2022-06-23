@@ -3,13 +3,10 @@ import { OrbitControls } from './jsm/controls/OrbitControls.js';
 import { FBXLoader } from './jsm/loaders/FBXLoader.js';
 
 let scene, fbxLoader, hemiLight, spotLight, renderer, 
-    camera, controls, container, buildingObj, buildingImg,
-    model;
+    camera, controls, container, buildingObj, model;
 
-var checkbox = document.querySelector("input[name=checkbox]");
 var loadingBar = document.getElementById("loadingBar");
 var progressBar = document.getElementById("progress");
-buildingImg = document.getElementById("IlojaBarImg");
 
 seeModel();
 
