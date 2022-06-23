@@ -161,7 +161,7 @@ scrollTL
 
 ```
  
-### Three.js
+### 3D model with Three.js
 Legacy wanted a visualisation of the building of how it used to be. A great way to show the building was in a 3D visualisation on the web. 
 
 We used Three.js to load in our 3D model on the web. To use Three.js we first imported it to the project with npm install, plus we added modules to our static folder (Three.js works client side). 
