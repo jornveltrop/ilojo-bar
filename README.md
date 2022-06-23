@@ -1,6 +1,6 @@
 # Ilojo Bar
 
-![Ilojo Bar](https://github.com/cmda-minor-web-cases/ilojo-bar/blob/main/assets/ilojo-bar.jpg?raw=true)
+![174823571-a708bbf2-4e10-48c0-aef2-89aa51717668](https://user-images.githubusercontent.com/44086608/175252176-13084c5e-dc35-4b4d-a8c2-986ad0e68d2a.jpg)
 
 ## Table of contents
   * [Design Rationale](#DesignRationale)
