@@ -1,6 +1,7 @@
 # Ilojo Bar
 
-![174823571-a708bbf2-4e10-48c0-aef2-89aa51717668](https://user-images.githubusercontent.com/44086608/175252176-13084c5e-dc35-4b4d-a8c2-986ad0e68d2a.jpg)
+![Banner Ilojo Bar](https://user-images.githubusercontent.com/74248007/175300137-1d406f5c-963d-4eb5-9f68-42d601644fa2.jpg)
+
 
 ## Table of contents
   * [Introduction](#Introduction)
@@ -340,7 +341,7 @@ Voor de API wordt gebruik gemaakt van het Headless CMS Prismic. In Prismic worde
 
 Een story wordt op basis van het id opgehaald in de server.
 
-```nodejs
+```javascript
 app.get('/discover/:id', async (req, res) => {
     let stories = await client.getAllByType('story', {
         orderings: {
