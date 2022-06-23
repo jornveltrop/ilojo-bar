@@ -205,7 +205,7 @@ The site is for the people in Lagos where sadly the internet connection is poorl
  
 #### Images
 The first thing we did was optimise our images. Some images took a lot of loading time, where one was even 2mb. This was drastic for our loading time. So we made all our images webp, which create smaller, richer images that make the web faster. Sadly webp is not always supported so we added a fallback. 
-```
+```html
 <picture>
    <source srcset="/images/close.webp" type="image/webp" >
    <source srcset="/images/close.png" type="image/png">
@@ -216,7 +216,7 @@ The first thing we did was optimise our images. Some images took a lot of loadin
 #### Compression
 We use the compression middleware to improve our performance as well. The middleware will attempt to compress response bodies for all request that traverse through the middleware, based on the given options.
 
-```
+```javascript
 // Compress alle responses
 app.use(compression())
 ```
@@ -224,7 +224,7 @@ app.use(compression())
 #### Caching
 Caching is a great way to improve the performance if you visit the site repeatedly. If you visit the site it caches the core, which is our JS, images, fonts and css, plus it caches the HTML pages you have visited. For the caching strategy we chose 'stale while revalidate'. This strategy means that if a request can be loaded from the caching it will be done this way. Otherwise it will run a fetch in the background to save it in the cache, this way your site wil be up to date with a delay of 1 refresh. This way it will load almost instant if you have visited the page before. Another great thing about caching is that if you are offline, but you have visited a page beforehand when you were online, it will still load. This is because it is cached in your local storage. 
 
-```
+```javascript
 self.addEventListener('fetch', function(event) {
 
     if (isCoreGetRequest(event.request)) {
@@ -270,7 +270,7 @@ self.addEventListener('fetch', function(event) {
 
 We also cache everything besides the HTML pages for a year. This is great for our images or other elements on the site, that do not change often. It does not have to load everytime we load the page again. Plus why not cache it if it doesn't change that often. 
 
-```
+```javascript
 app.use(function(req, res, next) {
     if (req.method == "GET" && !(req.rawHeaders.toString().includes("text/html"))) {
         res.set("Cache-control", "public, max-age=31536000")
