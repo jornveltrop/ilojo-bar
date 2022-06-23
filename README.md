@@ -3,12 +3,11 @@
 ![174823571-a708bbf2-4e10-48c0-aef2-89aa51717668](https://user-images.githubusercontent.com/44086608/175252176-13084c5e-dc35-4b4d-a8c2-986ad0e68d2a.jpg)
 
 ## Table of contents
-  * [Design Rationale](#DesignRationale)
   * [Introduction](#Introduction)
-     * [Debriefing](#Debriefing)
-     * [Problem Definition](#ProblemDefinition)
-     * [Solution](#Solution)
-     * [Code](#Code)
+  * [Debriefing](#Debriefing)
+  * [Problem Definition](#ProblemDefinition)
+  * [Solution](#Solution)
+  * [Code](#Code)
   * [License](#License)
 
 ## Introduction <a name="Introduction"> 
@@ -16,11 +15,9 @@ Ilojo Bar of Casa do Fernandez was a national monument in Lagos, Nigeria, that w
 
 This was our end assignment for the minor web development. Here you can read our design rationale where we explain the problem and explain our solutions plus how we made them. 
  
-## Design Rationale <a name="DesignRationale">
+## Debriefing <a name="Debriefing">
 
-### Debriefing <a name="Debriefing">
-
-#### Contact information
+### Contact information
 
 Client: Legacy 
 
@@ -30,11 +27,11 @@ Inquiry: 23-05-22
 
 Deadline: 23-06-22
 
-#### Background information
+### Background information
 
 Legacy | The Historical and Environmental Group of Nigeria, with in person Femky van Zijel, head of the research.
  
-#### Job description
+### Job description
 
 Legacy want all the stories brought together and have a visual representation of the building with the stories included.
 #### User stories
@@ -47,23 +44,23 @@ As an artist/visitor I want to be able to add a story to the website, so that I 
 **3 Experience Iloja bar**   
  As a resident from Lagos, member of the Nigerian diaspora of interested world citizen, I want to get a virtual impression of the building, so that I can see how it was in the earlier days. This way it will become a virtual monument of the vanished piece of Nigerian heritage
 
-#### Motive
+### Motive
 
 The reason of making this, is that the building was destroyed since 2016. Alosians will never know the amazing stories from withing the building. It was once a national monument which is now forgotten. That's why legacy want to let people know how special that building was and why. 
 
-#### Objective
+### Objective
 
 The purpose is to let people know the stories of the building of how it once was. See how beautiful it all was. 
 
-#### Produce
+### Produce
 
 Our product will be a visualisation of the building and it's history. You can go through the stories with a fun visualisation. We will make multiple prototypes and present them to Legacy.  
  
-#### Conditions
+### Conditions
 
 The deadline of the first sprint is on the third of june at 13:00. We want to make a working prototype to show what we have envisioned. It is necessary that you can go through the stories of Iloja bar, that is something Legacy explicitly want. We have to apply this with our own working API on the website. Legacy also wants a visualisation of the building. 
 
-#### Target audience
+### Target audience
 
 The target audience of the project are the lagosians. Legacy wants them to know their culture and history. A thing that is good to know about these people is that they use their phones a lot and most of them are older versions. That's why we need good support. Beside that they also have bad internet, which is why we also need to take into account that our website should not be that heavy. The most used browser are these in Nigeria:
  
@@ -72,15 +69,15 @@ The target audience of the project are the lagosians. Legacy wants them to know 
 Legacy also wants to reach out the Lagosians abroad. At last some people can visit who are interested in history, but these people are not the main focus. 
  
  
-#### Relationship with other projects
+### Relationship with other projects
 It falls under Legacy. Legacy keeps busy with other heritages in Nigeria. Sadly we don't have any examples. 
 
 ### Problem Definition <a name="ProblemDefinition">
 The problem Legacy is struggling with, is the remambrance of Iloja bar. It has been illegally demolished and no sign anymore of it existing. They want to have a visualisation of the building and a display of all the stories from Iloja bar. They want to make this in a site, where it will run mostly on mobile. Another problem is performance. Most of the people in Nigeria have old phones and the internet is unreliable. 
  
-### Solution <a name="Solution">
+## Solution <a name="Solution">
  
-### Code <a name="Code">
+## Code <a name="Code">
 
 ## License <a name="License">
 
