@@ -2,12 +2,10 @@ const CACHE_VERSION = 39;
 
 const CORE = 'core-cache';
 const CORE_FILES = [
-  '/js/script.js',
-  '/js/menu.js',
-  '/js/horizontalScroll.js',
-  '/js/scrollingStory.js',
   '/js/discover.js',
   '/js/mainScrollTrigger.js',
+  '/js/navigation.js',
+  '/js/scrollingStory.js',
   '/js/lib/gsap-st.js',
   '/js/lib/gsap-stp-st.js',
   '/js/lib/gsap.js',
