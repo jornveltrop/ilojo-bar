@@ -337,7 +337,7 @@ The story pages are dynamically being loaded in with the server with the API. Th
 
 The API is made in a the Headless CMS Primic. The stories are written in Prismic, as well as the photo's being added. 
 
-[Foto prismic]
+![image](https://user-images.githubusercontent.com/44086608/175304914-a0231494-152c-46f4-9054-70364c3b7c39.png)
 
 Every story is based on an id that is being retrieved from the server.
       
@@ -468,6 +468,7 @@ Sadly we only had a limited time for this project, so their are still features/e
 - [ ] Make the 3D model responsive
 - [ ] Routes in modules
 - [ ] The option to add stories
+- [ ] Add music for immersion
  
 ## License <a name="License">
 
