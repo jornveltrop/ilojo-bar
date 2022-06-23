@@ -1,3 +1,5 @@
+// Scrolling for wreckingball
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".wrecker", {

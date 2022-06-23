@@ -206,6 +206,10 @@ header.home img {
     transform-origin: top right;
 }
 
+.homeAnchor {
+    display: block;
+}
+
 
 /* Main */
 main.home {
@@ -261,6 +265,7 @@ main.home {
     z-index: 0;
 }
 
+/* See model section */
 .see_model_cont {
     position: fixed;
     top: calc(50vh - 48px);
@@ -357,7 +362,7 @@ footer.home {
     font-family: 'Austral Sans', sans-serif;
 }
 
-.scroll_btn span{
+.scroll_btn span {
     text-align: center;
     font-size: 1.2em;
     color: #ffffff;
@@ -366,7 +371,6 @@ footer.home {
 }
 
 /* DISCOVER PAGE */
-
 main.discover {
     display: flex;
     flex-direction: column;
@@ -422,11 +426,6 @@ main.discover {
     align-items: center;
     position: relative;
     padding-top: .5em;
-}
-
-.no_snap {
-    scroll-snap-align: none;
-    scroll-snap-type: none;
 }
 
 .discover li .window_wrap {
@@ -637,7 +636,6 @@ main.offline{
 }
 
 
-
 /* 3D MODEL PAGE */
 main.model {
     display: flex;
@@ -696,11 +694,6 @@ main.model {
     opacity: 1;
 }
 
-
-/* Header */
-.homeAnchor {
-    display: block;
-}
 
 /* MENU */
 nav {
@@ -852,6 +845,7 @@ nav a:after {
 }
 
 
+/* RESPONSIVE */
 @media only screen and (max-width: 1220px) {
     .in-view .window_L {
         transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-110deg);

@@ -3,12 +3,12 @@ gsap.defaults({overwrite: "auto"});
 
 let tl = gsap.timeline();
 
-
+// Animation on load
 tl.from("header img", {translateY: "-210%", rotation: "-10", duration: 2.5, ease: "elastic", delay: .5})
   .from(".mask_span", { y: "150%", duration: 0.7, stagger: 0.2 }, "<15%")
   .from(".scroll_btn", {translateY: "300px", ease: Power1.easeOut}, "<")
 
-
+// Animation on scroll
 let scrollTL = gsap.timeline({
     scrollTrigger: {
       trigger: '.img_cont',
@@ -30,9 +30,8 @@ scrollTL.fromTo('.scroll_btn', {opacity: 1, duration: .3}, {opacity: 0} )
         .addLabel('end')
        
 
-
-let btn = document.querySelector('footer button')
-
+// Scroll on click button
+const btn = document.querySelector('footer button')
 btn.addEventListener("click", () => {
   let scrollValue = scrollTL.scrollTrigger.labelToScroll('end')
   gsap.to(window, {scrollTo: scrollValue, duration: 2.2});
