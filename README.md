@@ -22,7 +22,7 @@ Ilojo Bar of Casa do Fernandez was a national monument in Lagos, Nigeria, that w
 ## Installation
 Clone this repository to you local folder:
 ```
-git clone https://github.com/JeanyDeVries/ilojo-bar.git
+git clone https://github.com/jornveltrop/ilojo-bar.git
 ```
 
 ## Functions
@@ -48,7 +48,7 @@ Sadly we only had a limited time for this project, so their are still features/e
 The makers of this web application are [Jorn Veltrop](https://github.com/jornveltrop) and [Jeany de Vries](https://github.com/JeanyDeVries).
 
 ## Contribution
-If you want to contribute to this web application, you can do that through an [issue](https://github.com/JeanyDeVries/ilojo-bar/issues).
+If you want to contribute to this web application, you can do that through an [issue](https://github.com/jornveltrop/ilojo-bar/issues).
 
 ## License
 ![image](https://user-images.githubusercontent.com/44086608/175332292-9de876e3-8886-4f3b-8463-51958dca3b23.png)
