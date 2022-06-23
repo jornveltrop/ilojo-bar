@@ -81,8 +81,9 @@ The problem Legacy is struggling with, is the remambrance of Ilojo bar. It has b
 You can look at our final product using this link:
 
 ### [Ilojo Bar live demo]()
-
-[foto home + gevels]
+ 
+![image](https://user-images.githubusercontent.com/44086608/175311012-25f9715e-c25b-4858-a1e6-6525277077e5.png)
+![image](https://user-images.githubusercontent.com/44086608/175311129-5ab3a7b3-9bf3-4172-8d5b-fc4bdf80ba4b.png)
 
 For our product we chose a Brazilian style. The bar is namely build by slaves who came back from Brazil. They brought this building style to Nigeria. 
 
@@ -163,6 +164,8 @@ scrollTL
 ### 3D model with Three.js
 Legacy wanted a visualisation of the building of how it used to be. A great way to show the building was in a 3D visualisation on the web. 
 
+https://user-images.githubusercontent.com/44086608/175312264-f1d37e1c-3f4b-4a96-9e66-362cc8ba7de1.mp4
+
 We used Three.js to load in our 3D model on the web. To use Three.js we first imported it to the project with npm install, plus we added modules to our static folder (Three.js works client side). 
 
 After that it was coding time. The first thing is to create a scene. This is where we display our elements. Here we set a camera perspective camera. This projection mode is designed to mimic the way the human eye sees. It is the most common projection mode used for rendering a 3D scene. After that we added some lighting to make the scene more realistic. 
@@ -193,8 +196,6 @@ After that we wanted some animation. We simply rotated the y rotation of the obj
     controls.maxPolarAngle = Math.PI/2;
     controls.enableZoom = false;
 ```
-
-https://user-images.githubusercontent.com/44086608/174762203-3fd11331-3024-4b24-8d45-dd0efb79a4c2.mp4
  
 ### Discover stories
 We coupled every story to a window in the discover stories page. You can look at the inside of the window, which shows a moment from Ilojo bar. By placing photo's behind the window and letting them open when their are in view (or on hover on desktop), will get people curious about the stories. You get people be triggered to explore the stories. 
@@ -302,7 +303,8 @@ The windows are made using different layers of photo's on top of each other. The
 ```
 
 The animating of the windows is also done by using CSS:
-[gifje windows]
+
+https://user-images.githubusercontent.com/44086608/175312353-c3845740-8ece-4dbc-b1e5-1ecdd3d4ed38.mp4
 
 ```css
 li:hover .window_L {
