@@ -210,6 +210,12 @@ header.home img {
     display: block;
 }
 
+.headerLogo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
 
 /* Main */
 main.home {
