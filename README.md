@@ -335,12 +335,12 @@ li:hover .window_R {
 ### Story pages
 The story pages are dynamically being loaded in with the server with the API. This gets the title, body text and the photo's of each story. The photo's give an visualisation of the story. 
 
-Voor de API wordt gebruik gemaakt van het Headless CMS Prismic. In Prismic worden de verhalen geschreven en foto's toegevoegd.
+The API is made in a the Headless CMS Primic. The stories are written in Prismic, as well as the photo's being added. 
 
 [Foto prismic]
 
-Een story wordt op basis van het id opgehaald in de server.
-
+Every story is based on an id that is being retrieved from the server.
+      
 ```javascript
 app.get('/discover/:id', async (req, res) => {
     let stories = await client.getAllByType('story', {
@@ -368,7 +368,7 @@ app.get('/discover/:id', async (req, res) => {
 })
 ```
 
-De story pages worden responsive gemaakt met CSS:
+The story pages are made responsive by using CSS:
 
 ```css
 @media only screen and (max-width: 756px) {    
