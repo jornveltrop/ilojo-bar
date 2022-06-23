@@ -196,9 +196,9 @@ After that we wanted some animation. We simply rotated the y rotation of the obj
 https://user-images.githubusercontent.com/44086608/174762203-3fd11331-3024-4b24-8d45-dd0efb79a4c2.mp4
  
 ### Discover stories
-Op de discover stories pagina's hebben we elk verhaal gekoppeld aan een gevel. Het lijkt alsof je elke keer door de gevel kijkt naar een moment uit de Ilojo Bar. Door de foto's achter de ramen te plaatsen en deze op hover open te laten gaan en op mobiel zodra deze in beeld zijn, zullen mensen nieuwsgierig worden naar de verhalen. Je wordt getriggerd om de verhalen te ontdekken.
+We coupled every story to a window in the discover stories page. You can look at the inside of the window, which shows a moment from Ilojo bar. By placing photo's behind the window and letting them open when their are in view (or on hover on desktop), will get people curious about the stories. You get people be triggered to explore the stories. 
 
-De verschillende verhalen worden op gehaald vanuit het Headless CMS, met server side templating worden deze omgezet in html.
+The different stories are being pulled from a Headless CMS. With server side templating they will be converted to html. 
 
 ```ejs
 <ol class="storiesList">
@@ -221,7 +221,7 @@ De verschillende verhalen worden op gehaald vanuit het Headless CMS, met server 
 </ol>
 ```
 
-De gevels zijn gemaakt met verschillende lagen foto's over elkaar heen. Deze zijn helemaal responsive gemaakt met CSS.
+The windows are made using different layers of photo's on top of each other. There are all made responsive using CSS. 
 
 ```css
 .discover li {
@@ -300,8 +300,7 @@ De gevels zijn gemaakt met verschillende lagen foto's over elkaar heen. Deze zij
 }
 ```
 
-
-Ook het animeren van de windows wordt in CSS gedaan:
+The animating of the windows is also done by using CSS:
 [gifje windows]
 
 ```css
@@ -331,12 +330,6 @@ li:hover .window_R {
     }
 }
 ```
-
-
-
- 
-
-
  
 ### Performance 
 The site is for the people in Lagos where sadly the internet connection is poorly and many people do not have the newest phones. To still make our site working, we made some changes to optimise our performance. 
