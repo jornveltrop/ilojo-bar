@@ -77,6 +77,90 @@ The problem Legacy is struggling with, is the remambrance of Iloja bar. It has b
  
 ## Product <a name="Product">
  
+Het uiteindelijk product kun je hier bekijken:
+
+### [Ilojo Bar live demo]()
+
+[foto home + gevels]
+
+We hebben voor ons product gekozen voor een Braziliaanse stijl. De bar is namelijk ooit gebouwd door uit Brazilië teruggekeerde tot slaafgemaakten. Deze bouwstijl brachten ze mee terug naar Nigeria. 
+
+We hebben ervoor gekozen om de gevels als beeldspraak te nemen voor de 9 verhalen. 
+Achter elke gevel zit een ander verhaal van de Ilojo Bar.
+
+### Gekozen user stories
+We hebben voor de volgende user stories gekozen om aan te werken:
+
+**1. Reading, listening and look at stories about Ilojo bar** <br>
+We hebben met de gevels een visualisatie gemaakt van de negen verhalen. Deze verhalen kun je lezen en bekijk met foto's die bij elk verhaal zijn toegevoegd. 
+
+**2. Experience Ilojo bar** <br>
+We hebben op de homepagina een visuele indruk gegeven van hoe het gebouw er vroeger uitzag in de omgeving van Lagos. Ook hebben we een 3D model toegevoegd aan het eindproduct.
+
+
+### Homepage
+We hebben de homepagina zo ontworpen dat je een gevoel van binnenkomen hebt. Door een foto van vroeger te combineren met een 3D model van hoe het gebouw er ooit echt uit heeft gezien, komt het tot leven en krijg je een goede indruk van de Ilojo bar in haar omgeving.
+
+We hebben de gebruiker de controle gegeven om het gebouw langzaam tot leven te laten komen door het te animeren op het scrollen van de pagina. Als je scrolt zoomt je in op de Ilojo Bar. 
+
+Dit hebben we gedaan in combinatie met een library van GSAP. Een JavaScript animatie library. Door de omgeving en het gebouw in verschillende lagen als foto over elkaar heen te leggen, kun je dit met opacity en scale mooi animeren.
+
+***HTML***
+
+```html
+<div class="scroll_cont">
+    <picture>
+        <source srcset="/images/ilojo_bar_bw_2.webp" type="image/webp">
+        <source srcset="/images/ilojo_bar_bw_2.png" type="image/png">
+        <img src="/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" width="1772px" height="1772px">
+    </picture>
+    <picture>
+        <source srcset="/images/ilojo_bar_bw_1.webp" type="image/webp">
+        <source srcset="/images/ilojo_bar_bw_1.jpg" type="image/jpeg">
+        <img id="background" src="/images/ilojo_bar_bw_1.jpg" alt="Ilojo bar old with environment" width="1772px" height="1772px">
+    </picture>
+    <picture>
+        <source srcset="/images/ilojo_bar_bw_2.webp" type="image/webp">
+        <source srcset="/images/ilojo_bar_bw_2.png" type="image/png">
+        <img id="color_building" src="/images/ilojo_bar_bw_2.png" alt="Colored Ilojo bar" width="1772px" height="1772px">
+    </picture>
+    <picture>
+        <source srcset="/images/ilojo_bar_bw_3.webp" type="image/webp">
+        <source srcset="/images/ilojo_bar_bw_3.png" type="image/png">
+        <img id="overlay" src="/images/ilojo_bar_bw_3.png" alt="Ilojo bar old with environment" width="1772px" height="1772px">
+    </picture>
+</div>
+
+```
+
+***GSAP JavaScript*** <br>
+Met GSAP animeer je HTML elementen met CSS properties door te kijken naar de hoeveelheid 'scroll'. Dit kan met de GSAP plugin *scrollTrigger*. 
+
+```javascript
+let scrollTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.img_cont',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: 1,
+      pin: true,
+      snap: 1
+    }
+});
+
+scrollTL
+ .fromTo('.scroll_btn', {opacity: 1, duration: .3}, {opacity: 0} )
+ .from('.scroll_cont', {scale: 1},'<')
+ .fromTo('#color_building', {opacity: 0}, {opacity: 1},'<')
+ .fromTo('#background', {opacity: 1}, {opacity: 0},'-=50%')
+ .fromTo('#overlay', {opacity: 1, scale: 1}, {opacity: 0, scale: 1.05}, '<25%')
+ .fromTo('.discover_cont',{opacity: 0, zIndex: 0, scale: 0.9, rotation:-3}, {opacity: 1, zIndex: 2, scale: 1, rotation:0}, '<')
+ .from('.see_model_cont',{ translateX: "100%", opacity: "0"}, '<')
+ .addLabel('end')
+
+
+```
+ 
 ### Three.js
 Legacy wanted a visualisation of the building of how it used to be. A great way to show the building was in a 3D visualisation on the web. 
 
