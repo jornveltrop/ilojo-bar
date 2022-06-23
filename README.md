@@ -170,7 +170,7 @@ After that it was coding time. The first thing is to create a scene. This is whe
 
 But we now have an empty scene with some lighting. The next step is loading the model. We used a fbs loader, because fbx was a known export in maya and blender. We made the materials double sided, because some materials weren't loading correctly. We added it to the scene and added the canvas to a container in HTML. 
 
-```
+```javascript
 fbxLoader.load(
         'models/building.fbx',
         (object) => {
@@ -188,7 +188,7 @@ fbxLoader.load(
 ```
 
 After that we wanted some animation. We simply rotated the y rotation of the object in the animate function. We only wanted to users to be able to grab the model and turn it horizontally. So we added orbitcontrols and disabled vertical movement and zooming. 
-```
+```javascript
     //disable vertical movement plus zooming
     controls.minPolarAngle = Math.PI/2;
     controls.maxPolarAngle = Math.PI/2;
