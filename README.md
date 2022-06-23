@@ -7,6 +7,7 @@
   * [Debriefing](#Debriefing)
   * [Problem Definition](#ProblemDefinition)
   * [Product](#Product)
+  * [Next steps](#Next)
   * [License](#License)
 
 ## Introduction <a name="Introduction"> 
@@ -193,6 +194,13 @@ app.use(function(req, res, next) {
     next()
 })
 ```
+ 
+## Next steps <a name="Next">
+Sadly we only had a limited time for this project, so their are still features/elements we want to add to this project. Here is a list of them: 
+- [ ] Styling of the story pages
+- [ ] Make the 3D model responsive
+- [ ] Routes in modules
+- [ ] The option to add stories
  
 ## License <a name="License">
 
