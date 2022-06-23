@@ -97,11 +97,11 @@ We hebben voor de volgende user stories gekozen om aan te werken:
 On the homepage we made a visual impression on how the building used to look like in the early days. We added the scenery around the building in Lagos. We also added a 3D model so people can have a 360 look of the building. 
 
 ### Homepage
-We hebben de homepagina zo ontworpen dat je een gevoel van binnenkomen hebt. Door een foto van vroeger te combineren met een 3D model van hoe het gebouw er ooit echt uit heeft gezien, komt het tot leven en krijg je een goede indruk van de Ilojo bar in haar omgeving.
+We designed the homepage in a way that it gives a feeling of coming into the building. By combing a picture of earlier with the 3D building of how the building would have looked like, it comes alive and you get a good impression of Ilojo bar and it's surrounding. 
 
-We hebben de gebruiker de controle gegeven om het gebouw langzaam tot leven te laten komen door het te animeren op het scrollen van de pagina. Als je scrolt zoomt je in op de Ilojo Bar. 
-
-Dit hebben we gedaan in combinatie met een library van GSAP. Een JavaScript animatie library. Door de omgeving en het gebouw in verschillende lagen als foto over elkaar heen te leggen, kun je dit met opacity en scale mooi animeren.
+We gave the user control to let the building slowly come to live by letting the scrolling animate the page. If you scroll, it zooms into the Ilojo bar. 
+ 
+We did this using a combination of the library from GSAP and a Javascript animation library. By giving the surrounding and the building multiple layers of photo's overlapping each other, you have the ability to animate it nicely with opacity and scale. 
 
 ***HTML***
 
@@ -132,7 +132,7 @@ Dit hebben we gedaan in combinatie met een library van GSAP. Een JavaScript anim
 ```
 
 ***GSAP JavaScript*** <br>
-Met GSAP animeer je HTML elementen met CSS properties door te kijken naar de hoeveelheid 'scroll'. Dit kan met de GSAP plugin *scrollTrigger*. 
+With GSAP you animate the HTML elemnents and CSS properties by looking at the amount of 'scroll'. This is possible with the GSAP plugin *scrollTrigger*. 
 
 ```javascript
 let scrollTL = gsap.timeline({
