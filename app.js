@@ -4,8 +4,6 @@ import express from 'express'
 import * as prismicH from '@prismicio/helpers'
 import { client } from './config/prismicConfig.js'
 import expressLayouts from 'express-ejs-layouts';
-import path from 'path';
-import {fileURLToPath} from 'url';
 import compression from 'compression'
 
 
