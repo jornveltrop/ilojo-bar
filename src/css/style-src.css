@@ -72,13 +72,6 @@ h4 {
     letter-spacing: .05em;
 }
 
-body > header {
-    color: var(--light);
-    padding: .8em 1em;
-    display: flex;
-    justify-content: space-between;
-}
-
 p {
     margin: 1em 0;
 }
@@ -86,12 +79,6 @@ p {
 main {
     padding: .8em 1em;
     width: 100%;
-}
-
-.headerLogo {
-    height: 50px;
-    width: auto;
-    display: block;
 }
 
 a {
@@ -169,6 +156,13 @@ button {
 
 .fixed {
     position: fixed;
+}
+
+body > header {
+    color: var(--light);
+    padding: .8em 1em;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* HOMEPAGE */
@@ -763,9 +757,7 @@ nav ul {
     display: flex;
     gap: 1em;
     flex-direction: column;
-    overflow-y: scroll;
     height: 100%;
-    padding-bottom: 4em;
 }
 
 nav li {
@@ -912,5 +904,12 @@ nav a:after {
 @media only screen and (max-width: 550px) {
     .scroll_cont {
         transform-origin: 72% 50%;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    nav ul {
+        overflow-y: scroll;
+        padding-bottom: 4em;
     }
 }
