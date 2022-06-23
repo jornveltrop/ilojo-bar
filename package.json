@@ -33,7 +33,15 @@
     "ts-loader": "^9.2.5"
   },
   "scripts": {
+    "prestart": "npm run build",
     "start": "node app.js",
+    "build": "npm-run-all build:*",
+    "build:css": "cleancss -o static/css/style.css src/css/style-src.css",
+    "build:jsDiscover": "node-minify --compressor uglify-js --input 'src/js/discover-src.js' --output 'static/js/discover.js'",
+    "build:jsMainScrollTrigger": "node-minify --compressor uglify-js --input 'src/js/mainScrollTrigger-src.js' --output 'static/js/mainScrollTrigger.js'",
+    "build:jsNavigation": "node-minify --compressor uglify-js --input 'src/js/navigation-src.js' --output 'static/js/navigation.js'",
+    "build:jsScrollingStory": "node-minify --compressor uglify-js --input 'src/js/scrollingStory-src.js' --output 'static/js/scrollingStory.js'",
+    "build:jsServiceWorker": "node-minify --compressor uglify-js --input 'src/serviceWorker-src.js' --output 'static/serviceWorker.js'",
     "test": "nodemon app.js"
   },
   "repository": {
