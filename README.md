@@ -200,6 +200,7 @@ Sadly we only had a limited time for this project, so their are still features/e
 - [ ] Styling of the story pages
 - [ ] Make the 3D model responsive
 - [ ] Routes in modules
+- [ ] The option to add stories
  
 ## License <a name="License">
 
