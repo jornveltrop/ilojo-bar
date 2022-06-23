@@ -77,26 +77,24 @@ The problem Legacy is struggling with, is the remambrance of Ilojo bar. It has b
  
 ## Product <a name="Product">
  
-Het uiteindelijk product kun je hier bekijken:
+You can look at our final product using this link:
 
 ### [Ilojo Bar live demo]()
 
 [foto home + gevels]
 
-We hebben voor ons product gekozen voor een Braziliaanse stijl. De bar is namelijk ooit gebouwd door uit Brazilië teruggekeerde tot slaafgemaakten. Deze bouwstijl brachten ze mee terug naar Nigeria. 
+For our product we chose a Brazilian style. The bar is namely build by slaves who came back from Brazil. They brought this building style to Nigeria. 
 
-We hebben ervoor gekozen om de gevels als beeldspraak te nemen voor de 9 verhalen. 
-Achter elke gevel zit een ander verhaal van de Ilojo Bar.
+We chose to use the windows of the building as a metaphor for the 9 stories. Behind each window is a story of Ilojo bar.
 
 ### Gekozen user stories
 We hebben voor de volgende user stories gekozen om aan te werken:
 
 **1. Reading, listening and look at stories about Ilojo bar** <br>
-We hebben met de gevels een visualisatie gemaakt van de negen verhalen. Deze verhalen kun je lezen en bekijk met foto's die bij elk verhaal zijn toegevoegd. 
+ We made a visualisation of the with the windows of the building for the 9 stories. You can read these stories and look at the photo's that were added for each of them. 
 
 **2. Experience Ilojo bar** <br>
-We hebben op de homepagina een visuele indruk gegeven van hoe het gebouw er vroeger uitzag in de omgeving van Lagos. Ook hebben we een 3D model toegevoegd aan het eindproduct.
-
+On the homepage we made a visual impression on how the building used to look like in the early days. We added the scenery around the building in Lagos. We also added a 3D model so people can have a 360 look of the building. 
 
 ### Homepage
 We hebben de homepagina zo ontworpen dat je een gevoel van binnenkomen hebt. Door een foto van vroeger te combineren met een 3D model van hoe het gebouw er ooit echt uit heeft gezien, komt het tot leven en krijg je een goede indruk van de Ilojo bar in haar omgeving.
