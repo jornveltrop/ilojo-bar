@@ -166,7 +166,7 @@ Legacy wanted a visualisation of the building of how it used to be. A great way 
 
 https://user-images.githubusercontent.com/44086608/175312264-f1d37e1c-3f4b-4a96-9e66-362cc8ba7de1.mp4
 
-We used Three.js to load in our 3D model on the web. To use Three.js we first imported it to the project with npm install, plus we added modules to our static folder (Three.js works client side). 
+We used Three.js to load in our 3D model on the web. To use Three.js we first imported it to the project with npm install, plus we added modules to our public folder (Three.js works client side). 
 
 After that it was coding time. The first thing is to create a scene. This is where we display our elements. Here we set a camera perspective camera. This projection mode is designed to mimic the way the human eye sees. It is the most common projection mode used for rendering a 3D scene. After that we added some lighting to make the scene more realistic. 
 

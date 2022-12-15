@@ -23,7 +23,7 @@ app.use(function(req, res, next) {
 })
 
 // Aangeven waar onze statische files zich bevinden  
-app.use(express.static('static'));
+app.use(express.static('public'));
 
 // Templating engine
 app.use(expressLayouts)
